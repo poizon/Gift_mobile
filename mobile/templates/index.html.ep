@@ -1,0 +1,63 @@
+%= include 'header'
+
+<div id="content_block">
+<div id="menu_left">
+    	<h2 class="left_h2"><img src="/images/h2_services_<%= $lang->id_lang %>.gif" alt="SERVICES" width="89" height="22" /></h2>
+		
+    	<ul id="menu_left">
+    	% for my $s(@$service) {
+			
+		% if($s_pages->{$s->id_pages}) {
+			<li>
+			<div class="menu_in"><ul>
+			% my $array = $s_pages->{$s->id_pages};
+			% for my $item(@$array) {
+				<li><a href="/<%= $item->[2] %>/<%= $item->[0] %>/<%= strip_lc($item->[1])%>.html" title="<%= $item->[1] %>"><%= $item->[1] %></a></li>
+				%}
+				</ul></div>
+			<span><%= $s->name_pages %></span></li>
+		 %} else {
+              	<li><a href="/<%= $s->mj_cat->url_cat %>/<%= $s->id_pages %>/<%= strip_lc($s->name_pages) %>.html" title="<%= $s->name_pages %>"><%= $s->name_pages %></a></li>
+                 %}
+	 %}
+    	</ul>
+    		
+    	<h2 class="left_h2"><a href="#"><img src="/images/h2_news_<%= $lang->id_lang %>.gif" alt="NEWS" width="89" height="25" /></a></h2>
+    		
+    	<div id="news_block">
+	% for my $page(@$news) {
+		<div class="news">
+		<%= pretty_date($page->date_pages) %><br/>
+		<a href="/<%= $url_cat %>/<%= $page->id_pages %>/<%= strip_lc($page->name_pages) %>.html"><%= $page->name_pages %></a>
+		</div>           
+	%}	    		
+	    	
+			</div>
+    		
+		</div>
+
+<div id="slider_main">
+    	<div id="slider">
+			<ul>
+				<li><a href="catalogue/58/бумага_блюбэк.html"><img src="images/b/OutdoorAdvertising21.png"/></a></li>
+				<li><a href="novosti/207/компания_swissqprint__расширяет_модельный_ряд.html"><img src="images/b/swissqprint_nyala.png" alt="" width="840" height="541" /></a></li>
+				<li><a href="catalogue/151/бэклит.html"><img src="images/b/BACKlit.png" alt="" width="840" height="541" /></a></li>
+				<li><a href="novosti/208/новая_модель_гибридного_супер-широкого_принтера_от_matan.html"><img src="images/b/Matan8QW6.png" alt="" width="840" height="541" /></a></li>
+				<li><a href="catalogue/59/полиэтилен.html"><img src="images/b/PEMAIN.png" alt="" width="840" height="541" /></a></li>
+				<!-- <li><a href="novosti/204/новый_уф-принтер_swissqprint_на_fespa_digital_2014.html"><img src="images/b/swissqprint1.png" alt="" width="840" height="541" /></a></li> -->
+				<li><a href="catalogue/184/smart-x.html"><img src="images/b/smartx.png" alt="" width="840" height="541" /></a></li>				
+			</ul>
+		</div>
+		
+		<div id="slider_foot">
+			<a href="catalogue/46/swissqprint.html"><img src="images/b/SWQ_main.png" alt="" width="279" height="114" /></a>
+			<a href="catalogue/62/matan_barak.html"><img src="images/b/Matan_main.png" alt="" width="279" height="114" /></a>
+			<a href="catalogue/77/azon.html"><img src="images/b/AZON_main.png" alt="" width="280" height="114" /></a>
+		</div>
+    </div>
+
+   	
+<div class="clear"></div>
+</div>
+		
+%= include 'footer'
