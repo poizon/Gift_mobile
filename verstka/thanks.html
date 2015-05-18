@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <title>Оформление заказа</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/touch-icon-iphone4.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="main">
+        <!--HEADER-->
+        <header class="header">
+            <a class="header_logo logo" href="/">
+                <h1 class="logo_name">GIFTEK</h1>
+                <img class="logo_pic" src="img/logo.png" alt="giftek"/>
+            </a>
+            <nav class="nav-ctrl">
+                <a class="nav-ctrl_i" href="#"><i class="ico-search"></i></a>
+                <a class="nav-ctrl_i" href="#"><i class="ico-cart"></i></a>
+            </nav>
+        </header>
+
+        <!--SEARCH BAR-->
+        <div class="search">
+            <form class="search-form" autocomplete="off">
+                <div class="search-form_field">
+                    <input id="search-text" type="search" class="search-form_text" placeholder="Что вы хотели бы найти?" value="">
+                    <button id="search-clear" type="button" class="search-form_clear"></button>
+                </div>
+                <button type="submit" class="search-form_btn btn __secondary">Поиск</button>
+            </form>
+        </div>
+
+        <div class="thanks">
+            Спасибо за заказ! <br/> Мы свяжемся с вами в ближайшее время
+        </div>
+
+    </div>
+
+	<!--FOOTER-->
+    <footer class="footer">
+        <div class="footer_links links">
+            <a class="links_i" href="#">О компании</a>
+            <a class="links_i" href="#">Товары</a>
+            <a class="links_i" href="#">Услуги</a>
+            <a class="links_i" href="#">Контакты</a>
+        </div>
+        <div class="links">
+            <span class="links_i copyright">© 1997-2015 ООО "ГИФТЕК"</span>
+            <a class="links_i desktop-site" href="#">Основной сайт</a>
+        </div>
+    </footer>
+
+    <!--JAVA SCRIPT-->
+    <!--libraries-->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!--plugins-->
+    <script src="js/jquery.validation.min.js"></script>
+    <!--scripts-->
+    <script>
+        $(function(){
+            $('#order-form').validate({
+                submit: {
+                    settings: {
+                        form: null,
+                        display: "inline",
+                        insertion: "append",
+                        allErrors: false,
+                        trigger: "click",
+                        button: "input[type='submit']",
+                        errorClass: "form_error",
+                        errorListClass: "form_error-list",
+                        inputContainer: '.form_field',
+                        clear: "focusin",
+                        scrollToError: false
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

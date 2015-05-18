@@ -1,0 +1,92 @@
+[Mon May 18 11:28:48 2015] [info] Listening at "http://*:3000".
+[Mon May 18 11:28:56 2015] [debug] Your secret passphrase needs to be changed!!!
+[Mon May 18 11:28:56 2015] [debug] GET "/".
+[Mon May 18 11:28:56 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:28:56 2015] [debug] Rendering template "index.html.ep".
+[Mon May 18 11:28:56 2015] [debug] 200 OK (0.160184s, 6.243/s).
+[Mon May 18 11:29:20 2015] [debug] GET "/".
+[Mon May 18 11:29:20 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:29:20 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 18 11:29:20 2015] [debug] 200 OK (0.002921s, 342.349/s).
+[Mon May 18 11:31:38 2015] [debug] GET "/".
+[Mon May 18 11:31:38 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:31:38 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 18 11:31:38 2015] [debug] 200 OK (0.002589s, 386.250/s).
+[Mon May 18 11:47:14 2015] [debug] GET "/".
+[Mon May 18 11:47:14 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:47:14 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 18 11:47:14 2015] [debug] 200 OK (0.003793s, 263.644/s).
+[Mon May 18 11:47:16 2015] [debug] GET "/".
+[Mon May 18 11:47:16 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:47:16 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 18 11:47:16 2015] [debug] 200 OK (0.003198s, 312.695/s).
+[Mon May 18 11:47:20 2015] [debug] GET "/".
+[Mon May 18 11:47:20 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:47:20 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 18 11:47:20 2015] [debug] 200 OK (0.001812s, 551.876/s).
+[Mon May 18 11:48:07 2015] [debug] GET "/".
+[Mon May 18 11:48:07 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:48:07 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 18 11:48:07 2015] [debug] 200 OK (0.001987s, 503.271/s).
+[Mon May 18 11:49:06 2015] [info] Listening at "http://*:3000".
+[Mon May 18 11:49:09 2015] [debug] Your secret passphrase needs to be changed!!!
+[Mon May 18 11:49:09 2015] [debug] GET "/".
+[Mon May 18 11:49:09 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:49:09 2015] [debug] Rendering template "index.html.ep".
+[Mon May 18 11:49:09 2015] [debug] 200 OK (0.055219s, 18.110/s).
+[Mon May 18 11:49:11 2015] [debug] GET "/about_company".
+[Mon May 18 11:49:11 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 18 11:49:11 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 18 11:49:11 2015] [debug] 200 OK (0.013733s, 72.817/s).
+[Mon May 18 11:49:15 2015] [debug] GET "/about_company".
+[Mon May 18 11:49:15 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 18 11:49:15 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 18 11:49:15 2015] [debug] 200 OK (0.001298s, 770.416/s).
+[Mon May 18 11:49:17 2015] [debug] GET "/".
+[Mon May 18 11:49:17 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:49:17 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 18 11:49:17 2015] [debug] 200 OK (0.001965s, 508.906/s).
+[Mon May 18 11:49:19 2015] [debug] GET "/about_company".
+[Mon May 18 11:49:19 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 18 11:49:19 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 18 11:49:19 2015] [debug] 200 OK (0.001309s, 763.942/s).
+[Mon May 18 11:49:20 2015] [debug] GET "/".
+[Mon May 18 11:49:20 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:49:20 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 18 11:49:20 2015] [debug] 200 OK (0.002069s, 483.325/s).
+[Mon May 18 11:49:21 2015] [debug] GET "/about_company".
+[Mon May 18 11:49:21 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 18 11:49:21 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 18 11:49:21 2015] [debug] 200 OK (0.001041s, 960.615/s).
+[Mon May 18 11:49:24 2015] [debug] GET "/".
+[Mon May 18 11:49:24 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:49:24 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 18 11:49:24 2015] [debug] 200 OK (0.003344s, 299.043/s).
+[Mon May 18 11:49:34 2015] [debug] GET "/".
+[Mon May 18 11:49:34 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:49:34 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 18 11:49:34 2015] [debug] 200 OK (0.002737s, 365.364/s).
+[Mon May 18 11:50:43 2015] [debug] GET "/about_company".
+[Mon May 18 11:50:43 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 18 11:50:43 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 18 11:50:43 2015] [debug] 200 OK (0.001519s, 658.328/s).
+[Mon May 18 11:51:15 2015] [debug] GET "/".
+[Mon May 18 11:51:15 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:51:15 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 18 11:51:15 2015] [debug] 200 OK (0.002729s, 366.435/s).
+[Mon May 18 11:51:26 2015] [debug] GET "/about_company".
+[Mon May 18 11:51:26 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 18 11:51:26 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 18 11:51:26 2015] [debug] 200 OK (0.001446s, 691.563/s).
+[Mon May 18 11:51:30 2015] [debug] GET "/".
+[Mon May 18 11:51:30 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:51:30 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 18 11:51:30 2015] [debug] 200 OK (0.001783s, 560.852/s).
+[Mon May 18 11:51:52 2015] [debug] GET "/about_company".
+[Mon May 18 11:51:52 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 18 11:51:52 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 18 11:51:52 2015] [debug] 200 OK (0.001514s, 660.502/s).
+[Mon May 18 11:51:54 2015] [debug] GET "/".
+[Mon May 18 11:51:54 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 18 11:51:54 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 18 11:51:54 2015] [debug] 200 OK (0.002936s, 340.599/s).

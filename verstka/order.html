@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <title>Оформление заказа</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/touch-icon-iphone4.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="main">
+        <!--HEADER-->
+        <header class="header">
+            <a class="header_logo logo" href="/">
+                <h1 class="logo_name">GIFTEK</h1>
+                <img class="logo_pic" src="img/logo.png" alt="giftek"/>
+            </a>
+            <nav class="nav-ctrl">
+                <a class="nav-ctrl_i" href="#"><i class="ico-search"></i></a>
+                <a class="nav-ctrl_i __show-cart" href="#">
+                    <i class="ico-cart"></i>
+                    <div class="cart-size"><span class="cart-size_text">2</span></div>
+                </a>
+            </nav>
+        </header>
+
+        <!--BREADCRUMBS-->
+        <nav class="breadcrumbs">
+            <div class="breadcrumbs_w">
+                <span class="breadcrumbs_i">
+                    <a class="breadcrumbs_lnk __active" href="javascript:void(0);">оформление заказа</a>
+                </span>
+            </div>
+        </nav>
+
+        <!--ORDER FORM-->
+        <form id="order-form" class="order-form form container" action="#">
+            <h2 class="section-header">Оформление заказа</h2>
+            <div class="form_field">
+                <input class="form_input" type="text" name="name" id="name" placeholder="Имя*"
+                       data-validation="NOTEMPTY"
+                       data-validation-message="Обязательное поле"/>
+            </div>
+            <div class="form_field">
+                <input class="form_input" type="text" name="lastname" id="lastname" placeholder="Фамилия*"
+                       data-validation="NOTEMPTY"
+                       data-validation-message="Обязательное поле"/>
+            </div>
+            <div class="form_field">
+                <input class="form_input" type="text" name="email" id="email" placeholder="Email-адрес*"
+                       data-validation="NOTEMPTY"
+                       data-validation-message="Обязательное поле"
+                       data-validation-regex="/^([^@]+?)@(([a-z0-9]-*)*[a-z0-9]+\.)+([a-z0-9]+)$/i"
+                       data-validation-regex-message="Не корректный Email"/>
+            </div>
+            <div class="form_field">
+                <input class="form_input" type="text" name="phone" id="phone" placeholder="Телефон*"
+                       data-validation="NOTEMPTY"
+                       data-validation-message="Обязательное поле"
+                       data-validation-regex="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/i"
+                       data-validation-regex-message="Не корректный телефон"/>
+            </div>
+            <div class="form_field">
+                <textarea name="form_input" id="note" rows="5" placeholder="Примечания"></textarea>
+            </div>
+
+            <!--ORDER INFORMATIOM-->
+            <h2 class="section-header">Ваш заказ</h2>
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>Товар</th>
+                        <th>Всего</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Картридж для обслуживания принтеров HP 831x1</td>
+                        <td>10 554руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Картридж для обслуживания принтеров HP 831x1</td>
+                        <td>539 000 руб.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Заказ на сумму</th>
+                        <th>549 554руб.</th>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <!--PAYMENT SYSTEM-->
+            <h2 class="section-header">Выбор способа оплаты</h2>
+            <div class="form_field radio">
+                <div class="radio_field">
+                    <input class="radio_input" type="radio" name="payment" checked id="payment1"/>
+                    <label for="payment1">Оплата по безналичному расчету через банк, счёт выслать на E-mail</label>
+                </div>
+                <div class="radio_field">
+                    <input class="radio_input" type="radio" name="payment" id="payment2"/>
+                    <label for="payment1">Наличными по факту получения</label>
+                </div>
+            </div>
+
+            <input class="order-form_submit btn __primary" type="submit" value="заказать"/>
+        </form>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer_links links">
+            <a class="links_i" href="#">О компании</a>
+            <a class="links_i" href="#">Товары</a>
+            <a class="links_i" href="#">Услуги</a>
+            <a class="links_i" href="#">Контакты</a>
+        </div>
+        <div class="links">
+            <span class="links_i copyright">© 1997-2015 ООО "ГИФТЕК"</span>
+            <a class="links_i desktop-site" href="#">Основной сайт</a>
+        </div>
+    </footer>
+
+    <!--JAVA SCRIPT-->
+    <!--libraries-->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!--plugins-->
+    <script src="js/jquery.validation.min.js"></script>
+    <!--scripts-->
+    <script>
+        $(function(){
+            $('#order-form').validate({
+                submit: {
+                    settings: {
+                        form: null,
+                        display: "inline",
+                        insertion: "append",
+                        allErrors: false,
+                        trigger: "click",
+                        button: "input[type='submit']",
+                        errorClass: "form_error",
+                        errorListClass: "form_error-list",
+                        inputContainer: '.form_field',
+                        clear: "focusin",
+                        scrollToError: false
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

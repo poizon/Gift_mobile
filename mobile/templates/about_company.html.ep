@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <title>Контент</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/touch-icon-iphone4.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/jquery.bxslider.css"/>
+    <link rel="stylesheet" href="css/flexslider.css"/>
+</head>
+<body>
+    <div class="main">
+        <!--HEADER-->
+        <header class="header">
+            <a class="header_logo logo" href="/">
+                <h1 class="logo_name">GIFTEC</h1>
+                <img class="logo_pic" src="/img/logo.png" alt="giftec"/>
+            </a>
+            <nav class="nav-ctrl">
+                <a class="nav-ctrl_i" href="#"><i class="ico-search"></i></a>
+                <a class="nav-ctrl_i" href="#"><i class="ico-cart"></i></a>
+            </nav>
+        </header>
+
+        <!--BREADCRUMBS-->
+        <nav class="breadcrumbs">
+            <div class="breadcrumbs_w">
+                <span class="breadcrumbs_i">
+                    <a class="breadcrumbs_lnk __active" href="javascript:void(0);">Главная</a>/Контент
+                </span>
+            </div>
+        </nav>
+
+            <!--CONTENT-->
+            <div class="content">
+                <p><b>AZON DTS:</b></p><ul><li>42" LED panel<br>With a 1920 x 1080 Full HD resolution</li><li>True 16:9 aspect ratio<br>View your movies as the director intended</li><li>Wide 176-degree vertical and 176-degree horizontal angles<br>See a clear picture from anywhere in the room</li><li>Built-in digital tuner<br>Watch digital broadcasts, including HDTV programs where available</li><li>HDMI Inputs: 2<br>Enjoy a superior HD experience with HDMI, the one cable audio/video solution</li><li>42" screen measured diagonally from corner to corner</li></ul><br><b>ENERGY STAR<sup> </sup></b><br>Products that are ENERGY STAR-qualified prevent greenhouse gas emissions by meeting strict energy efficiency guidelines set by the U.S. Environmental Protection Agency and the U.S. Department of Energy. The ENERGY STAR name and marks are registered marks owned by the U.S. government, as part of their energy efficiency and environmental activities.<br><br>TV stand sold separately. See all <b><a href="#"> TV stands.</a></b> <br><br>TV mount sold separately. See all <b> <a href="#">TV mounts.</a></b>
+
+                <!--FEATURES-->
+                <div class="features">
+                    <h3 class="features_t">Additional Specifications</h3>
+                    <table class="features_table">
+                        <tbody>
+                            <tr>
+                                <td class="features_name">Service Carrier:</td>
+                                <td>Straight Talk</td>
+                            </tr>
+                            <tr>
+                                <td class="features_name">Service Carrier:</td>
+                                <td>Straight Talk</td>
+                            </tr>
+                            <tr>
+                                <td class="features_name">Service Carrier:</td>
+                                <td>Straight Talk</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3 class="features_t">More Information</h3>
+                    <table class="features_table">
+                        <tbody>
+                        <tr>
+                            <td class="features_name">Model No.:</td>
+                            <td>STSAS968CWTR.45</td>
+                        </tr>
+                        <tr>
+                            <td class="features_name">Shipping Weight (in pounds):</td>
+                            <td>0.8</td>
+                        </tr>
+                        <tr>
+                            <td class="features_name">Product in Inches (L x W x H):</td>
+                            <td>5.4 x 2.8 x 0.3</td>
+                        </tr>
+                        <tr>
+                            <td class="features_name">Origin of Components:</td>
+                            <td>Imported</td>
+                        </tr>
+                        <tr>
+                            <td class="features_name">Shipping Weight (in pounds):</td>
+                            <td>553728752</td>
+                        </tr>
+                        <tr>
+                            <td class="features_name">Product in Inches (L x W x H):</td>
+                            <td>5.4 x 2.8 x 0.3</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer_links links">
+            <a class="links_i" href="#">О компании</a>
+            <a class="links_i" href="#">Товары</a>
+            <a class="links_i" href="#">Услуги</a>
+            <a class="links_i" href="#">Контакты</a>
+        </div>
+        <div class="links">
+            <span class="links_i copyright">© 1997-2015 ООО "ГИФТЕК"</span>
+            <a class="links_i desktop-site" href="#">Основной сайт</a>
+        </div>
+    </footer>
+
+    <!--JAVA SCRIPT-->
+    <!--libraries-->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!--plugins-->
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <!--scripts-->
+    <script>
+        $(function(){
+            $('#main-banner').bxSlider({
+                controls: false,
+                adaptiveHeight: true,
+                auto: true,
+                pause: 5000
+            });
+
+            $('#carousel-like').bxSlider({
+                slideWidth: 130,
+                minSlides: 1,
+                maxSlides: 20,
+                slideMargin: 0,
+                moveSlides: 3,
+                pager: false
+            });
+
+            $('#carousel-featured').bxSlider({
+                slideWidth: 130,
+                minSlides: 1,
+                maxSlides: 20,
+                slideMargin: 0,
+                moveSlides: 3,
+                pager: false
+            });
+        })
+    </script>
+    <script>
+        $(function(){
+            $('#card-carousel').flexslider({
+                animation: 'slide',
+                minItems: 3,
+                maxItems: 3,
+                slideshow: false,
+                itemWidth: 60,
+                itemMargin: 0,
+                move: 1,
+                controlNav: false,
+                asNavFor: '#card-slider'
+            });
+
+            $('#card-slider').flexslider({
+                animation: "slide",
+                directionNav: false,
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                sync: "#card-carousel",
+                after: function(){
+                    //Выделение активного элемента карусели (карточка товара)
+                    $('#card-slider').find('.slides').find('li').each(function(i){
+                        if ($(this).hasClass('flex-active-slide')){
+                            var $carousel = $('#card-carousel').find('.slides').find('li');
+                            $carousel
+                                .find('.__active').removeClass('__active')
+                                .end().eq(i).find('.card-carousel_thumb').addClass('__active');
+
+                            return this;
+                        }
+                    })
+                }
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
