@@ -40,26 +40,13 @@
 
         <!--MAIN BANNER-->
         <ul id="main-banner" class="main-banner">
+	%for my $sl(@$sliders) {	
             <li>
-                <a class="main-banner_lnk" href="#">
-                    <img class="main-banner_pic" src="/img/banner/image1.jpg" alt=""/>
+                <a class="main-banner_lnk" href="<%= $sl->source_url %>">
+                    <img class="main-banner_pic" src="<%= $sl->image_url %>" alt="<%= $sl->descript %>"/>
                 </a>
             </li>
-            <li>
-                <a class="main-banner_lnk" href="#">
-                    <img class="main-banner_pic" src="/img/banner/image2.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="main-banner_lnk" href="#">
-                    <img class="main-banner_pic" src="/img/banner/image3.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="main-banner_lnk" href="#">
-                    <img class="main-banner_pic" src="/img/banner/image4.jpg" alt=""/>
-                </a>
-            </li>
+	%}
            
         </ul>
 
@@ -99,7 +86,7 @@
                 </a>
             </li>
             <li class="nav-list_i">
-                <a class="nav-list_lnk" href="#">
+                <a class="nav-list_lnk" href="/contacts">
                     <div class="nav-list_col">
                         <img class="nav-list_pic" src="/img/menu/image4.png" width="31" height="40" alt=""/>
                     </div>
@@ -680,9 +667,9 @@
 
     <!--JAVA SCRIPT-->
     <!--libraries-->
-    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="/js/jquery-1.11.1.min.js"></script>
     <!--plugins-->
-    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="/js/jquery.bxslider.min.js"></script>
     <!--scripts-->
     <script>
         $(function(){
@@ -712,6 +699,6 @@
             });
         })
     </script>
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>

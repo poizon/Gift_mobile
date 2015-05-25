@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
-    <title>Контент</title>
+    <title>О компании</title>
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/img/touch-icon.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/img/touch-icon-iphone4.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/jquery.bxslider.css"/>
-    <link rel="stylesheet" href="css/flexslider.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/jquery.bxslider.css"/>
+    <link rel="stylesheet" href="/css/flexslider.css"/>
 </head>
 <body>
     <div class="main">
@@ -29,90 +29,97 @@
         </header>
 
         <!--BREADCRUMBS-->
-        <nav class="breadcrumbs">
+       <nav class="breadcrumbs">
             <div class="breadcrumbs_w">
                 <span class="breadcrumbs_i">
-                    <a class="breadcrumbs_lnk __active" href="javascript:void(0);">Главная</a>/Контент
+                    <a class="breadcrumbs_lnk" href="/">Главная</a>
+                </span>
+                <span class="breadcrumbs_i">
+                    <a class="breadcrumbs_lnk __active" href="javascript:void(0);">О Компании</a>
                 </span>
             </div>
         </nav>
 
             <!--CONTENT-->
             <div class="content">
-                <p><b>AZON DTS:</b></p><ul><li>42" LED panel<br>With a 1920 x 1080 Full HD resolution</li><li>True 16:9 aspect ratio<br>View your movies as the director intended</li><li>Wide 176-degree vertical and 176-degree horizontal angles<br>See a clear picture from anywhere in the room</li><li>Built-in digital tuner<br>Watch digital broadcasts, including HDTV programs where available</li><li>HDMI Inputs: 2<br>Enjoy a superior HD experience with HDMI, the one cable audio/video solution</li><li>42" screen measured diagonally from corner to corner</li></ul><br><b>ENERGY STAR<sup> </sup></b><br>Products that are ENERGY STAR-qualified prevent greenhouse gas emissions by meeting strict energy efficiency guidelines set by the U.S. Environmental Protection Agency and the U.S. Department of Energy. The ENERGY STAR name and marks are registered marks owned by the U.S. government, as part of their energy efficiency and environmental activities.<br><br>TV stand sold separately. See all <b><a href="#"> TV stands.</a></b> <br><br>TV mount sold separately. See all <b> <a href="#">TV mounts.</a></b>
+                <br><b>О компании<sup> </sup></b>
+                <br>
+GIFTEC была создана в 1997 году, как поставщик оборудования и материалов для рекламы. С того времени компания приобрела одну из лидирующих позиций в отрасли.
+<br>
+Мы не только предлагаем материалы и оборудование высокого класса, но и индивидуально подходим к каждому бизнес партнёру. Менеджеры и технические специалисты проходят обучение за рубежом, у компаний-производителей.
+<br>
+Наш отдел технического обслуживания доступен 24 часа, и в любое время готов помочь клиенту.
+<br>
+Наш головной офис находится в Москве. Также у нас есть офисы в Санкт-Петербурге, Киеве (для продаж в Украине) и Таллинне (для продаж в Европе и странах СНГ).
+Чтобы эффективно поддерживать наших клиентов по всей России, у нас развита широкая дилерская сеть в различных городах. Есть дилерские офисы и склады в Новосибирске, Владивостоке, Омске, Екатеринбурге, Красноярске, Иркутске, Самаре и Казани.
+<br>
+Широкий ассортимент продукции GIFTEC позволяет клиентам получить наилучшее решение уникальных задач.
+<br>
+Мы тесно сотрудничаем с нашими поставщиками для того, чтобы первыми предложить инновационные продукты и технологии по конкурентным ценам.
+Благодаря своему многолетнему опыту мы предлагаем своим клиентам только оптимальные решения поставленных задач, проверенное оборудование, профессиональное обслуживание и поддержку.
+<br>
+Мы стремимся предлагать бизнес-проекты, которые делают реальный финансовый смысл для наших клиентов.<br>
+Наша миссия состоит в том, чтобы поставить самое лучшее оборудование и лучшие расходные материалы от ведущих европейских лидеров рынка.<br>
+Мы предлагаем настройку, гарантийное и послегарантийное обслуживание всего предлагаемого нами оборудования.<br>
+Наша дружная команда всегда готова помочь Вам в выборе оборудования и материалов.<p></p>
 
-                <!--FEATURES-->
-                <div class="features">
-                    <h3 class="features_t">Additional Specifications</h3>
-                    <table class="features_table">
-                        <tbody>
-                            <tr>
-                                <td class="features_name">Service Carrier:</td>
-                                <td>Straight Talk</td>
-                            </tr>
-                            <tr>
-                                <td class="features_name">Service Carrier:</td>
-                                <td>Straight Talk</td>
-                            </tr>
-                            <tr>
-                                <td class="features_name">Service Carrier:</td>
-                                <td>Straight Talk</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h3 class="features_t">More Information</h3>
-                    <table class="features_table">
-                        <tbody>
-                        <tr>
-                            <td class="features_name">Model No.:</td>
-                            <td>STSAS968CWTR.45</td>
-                        </tr>
-                        <tr>
-                            <td class="features_name">Shipping Weight (in pounds):</td>
-                            <td>0.8</td>
-                        </tr>
-                        <tr>
-                            <td class="features_name">Product in Inches (L x W x H):</td>
-                            <td>5.4 x 2.8 x 0.3</td>
-                        </tr>
-                        <tr>
-                            <td class="features_name">Origin of Components:</td>
-                            <td>Imported</td>
-                        </tr>
-                        <tr>
-                            <td class="features_name">Shipping Weight (in pounds):</td>
-                            <td>553728752</td>
-                        </tr>
-                        <tr>
-                            <td class="features_name">Product in Inches (L x W x H):</td>
-                            <td>5.4 x 2.8 x 0.3</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+<br><b>Основные поставщики «Гифтек»<sup> </sup></b>
+                <br>
+                <ul>
+                    <b>Материалы для печати:</b>
+                    <li>Algaflex</li>
+                    <li>IDEMPAPER</li>
+                    <li>OBEIKAN</li>
+                    <li>ALGALITE</li>
+                    <li>ALTEC</li> 
+                </ul>
+                <ul><b>Листовые материалы:</b>
+                    <li>КАРА</li>
+                    <li>SMART X</li>
+                    <li>PilloPak</li> 
+                </ul>
+                <ul><b>Оборудование:</b>
+                    <li>MATAN</li>
+                    <li>SWISSQPRINT</li>
+                    <li>ROLLSROLLER</li>
+                    <li>HP Latex</li>
+                    <li>GT Print</li>
+                    <li>AZON</li> 
+                </ul>
+                <ul><b>Чернила:</b>
+                    <li>TRIANGLE</li>
+                    <li>Ink Mill</li>
+                    <li>HP Latex</li> 
+                </ul>
+                <ul><b>Расходные материалы:</b>
+                    <li>BERKSHIRE</li>
+                </ul>
+                <ul><b>Технический текстиль:</b>
+                    <li>OBEIKAN</li>
+                    <li>VERSEIDAG</li>
+                    <li>INTERTAPE</li>
+                    <li>MD TEXTILES</li>
+                    <li>ARIA</li>
+                    <li>EXPAFOL</li>
+                    <li>FORSTHOFF</li> 
+                </ul>
+                <ul><b>Безопасность Дорожного движения:</b>
+                    <li>NIPPON CARBIDE</li>
+                    <li>AVERY DENNISION</li>
+                    <li>ALGALITE</li>
+                    <li>DM</li> 
+                </ul>
             </div>
     </div>
 
-    <!--FOOTER-->
-    <footer class="footer">
-        <div class="footer_links links">
-            <a class="links_i" href="#">О компании</a>
-            <a class="links_i" href="#">Товары</a>
-            <a class="links_i" href="#">Услуги</a>
-            <a class="links_i" href="#">Контакты</a>
-        </div>
-        <div class="links">
-            <span class="links_i copyright">© 1997-2015 ООО "ГИФТЕК"</span>
-            <a class="links_i desktop-site" href="#">Основной сайт</a>
-        </div>
-    </footer>
+%=include 'footer'
 
     <!--JAVA SCRIPT-->
     <!--libraries-->
-    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="/js/jquery-1.11.1.min.js"></script>
     <!--plugins-->
-    <script src="js/jquery.bxslider.min.js"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="/js/jquery.bxslider.min.js"></script>
+    <script src="/js/jquery.flexslider-min.js"></script>
     <!--scripts-->
     <script>
         $(function(){
@@ -179,6 +186,6 @@
             });
         });
     </script>
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>

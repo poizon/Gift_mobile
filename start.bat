@@ -1,1 +1,1 @@
-morbo mobile/script/mobile
+morbo mobile/script/mobile -w ./mobile

@@ -90,3 +90,1023 @@
 [Mon May 18 11:51:54 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
 [Mon May 18 11:51:54 2015] [debug] Rendering cached template "index.html.ep".
 [Mon May 18 11:51:54 2015] [debug] 200 OK (0.002936s, 340.599/s).
+[Mon May 25 09:52:06 2015] [info] Listening at "http://*:3000".
+[Mon May 25 09:52:21 2015] [debug] Your secret passphrase needs to be changed!!!
+[Mon May 25 09:52:21 2015] [debug] GET "/".
+[Mon May 25 09:52:21 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 09:52:21 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 09:52:21 2015] [debug] 200 OK (0.078826s, 12.686/s).
+[Mon May 25 12:07:05 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 12:07:05 2015] [info] Listening at "http://*:3000".
+[Mon May 25 12:07:09 2015] [debug] GET "/".
+[Mon May 25 12:07:09 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 12:07:09 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 12:07:09 2015] [debug] 200 OK (0.068557s, 14.586/s).
+[Mon May 25 14:20:38 2015] [debug] GET "/".
+[Mon May 25 14:20:38 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 14:20:38 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 25 14:20:38 2015] [debug] 200 OK (0.003195s, 312.989/s).
+[Mon May 25 14:20:47 2015] [debug] GET "/".
+[Mon May 25 14:20:47 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 14:20:47 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 25 14:20:47 2015] [debug] 200 OK (0.002860s, 349.650/s).
+[Mon May 25 14:21:26 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:21:26 2015] [info] Listening at "http://*:3000".
+[Mon May 25 14:21:29 2015] [debug] GET "/".
+[Mon May 25 14:21:29 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 14:21:30 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 14:21:30 2015] [debug] 200 OK (0.779140s, 1.283/s).
+[Mon May 25 14:21:49 2015] [debug] GET "/about_company".
+[Mon May 25 14:21:49 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:21:49 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:21:49 2015] [debug] 200 OK (0.012822s, 77.991/s).
+[Mon May 25 14:21:52 2015] [debug] GET "/".
+[Mon May 25 14:21:52 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 14:21:52 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 25 14:21:52 2015] [debug] 200 OK (0.008183s, 122.205/s).
+[Mon May 25 14:22:16 2015] [debug] GET "/about_company".
+[Mon May 25 14:22:16 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:22:16 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:22:16 2015] [debug] 200 OK (0.001036s, 965.251/s).
+[Mon May 25 14:22:18 2015] [debug] GET "/".
+[Mon May 25 14:22:18 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 14:22:18 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 25 14:22:18 2015] [debug] 200 OK (0.008333s, 120.005/s).
+[Mon May 25 14:25:06 2015] [debug] GET "/about_company".
+[Mon May 25 14:25:06 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:25:06 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:25:06 2015] [debug] 200 OK (0.001595s, 626.959/s).
+[Mon May 25 14:27:18 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:18 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:18 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:27:18 2015] [debug] 200 OK (0.001687s, 592.768/s).
+[Mon May 25 14:27:20 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:20 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:20 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:27:20 2015] [debug] 200 OK (0.001581s, 632.511/s).
+[Mon May 25 14:27:20 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:20 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:20 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:27:20 2015] [debug] 200 OK (0.001988s, 503.018/s).
+[Mon May 25 14:27:21 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:21 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:21 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:27:21 2015] [debug] 200 OK (0.001595s, 626.959/s).
+[Mon May 25 14:27:22 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:22 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:22 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:27:22 2015] [debug] 200 OK (0.001751s, 571.102/s).
+[Mon May 25 14:27:22 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:22 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:22 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:27:22 2015] [debug] 200 OK (0.003033s, 329.707/s).
+[Mon May 25 14:27:31 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:27:31 2015] [info] Listening at "http://*:3000".
+[Mon May 25 14:27:31 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:31 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:31 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:27:31 2015] [debug] 200 OK (0.018728s, 53.396/s).
+[Mon May 25 14:27:53 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:53 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:53 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:27:53 2015] [debug] 200 OK (0.001595s, 626.959/s).
+[Mon May 25 14:27:54 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:54 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:54 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:27:54 2015] [debug] 200 OK (0.002453s, 407.664/s).
+[Mon May 25 14:27:55 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:55 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:55 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:27:55 2015] [debug] 200 OK (0.001614s, 619.579/s).
+[Mon May 25 14:27:55 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:55 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:55 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:27:55 2015] [debug] 200 OK (0.001623s, 616.143/s).
+[Mon May 25 14:27:56 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:56 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:56 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:27:56 2015] [debug] 200 OK (0.002360s, 423.729/s).
+[Mon May 25 14:27:56 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:56 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:56 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:27:56 2015] [debug] 200 OK (0.001625s, 615.385/s).
+[Mon May 25 14:27:56 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:56 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:56 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:27:56 2015] [debug] 200 OK (0.001283s, 779.423/s).
+[Mon May 25 14:27:56 2015] [debug] GET "/about_company".
+[Mon May 25 14:27:56 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:27:56 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:27:56 2015] [debug] 200 OK (0.001631s, 613.121/s).
+[Mon May 25 14:28:20 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:28:20 2015] [info] Listening at "http://*:3000".
+[Mon May 25 14:28:20 2015] [debug] GET "/about_company".
+[Mon May 25 14:28:20 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:28:20 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:28:20 2015] [debug] 200 OK (0.017198s, 58.146/s).
+[Mon May 25 14:28:51 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:28:51 2015] [debug] GET "/".
+[Mon May 25 14:28:51 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 14:28:51 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 14:28:51 2015] [debug] 200 OK (0.063416s, 15.769/s).
+[Mon May 25 14:28:55 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:28:59 2015] [debug] GET "/about_company".
+[Mon May 25 14:28:59 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:28:59 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:28:59 2015] [debug] 200 OK (0.016583s, 60.303/s).
+[Mon May 25 14:29:01 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:29:29 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:29:48 2015] [debug] GET "/about_company".
+[Mon May 25 14:29:48 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:29:48 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:29:48 2015] [debug] 200 OK (0.032935s, 30.363/s).
+[Mon May 25 14:29:51 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:29:51 2015] [debug] GET "/about_company".
+[Mon May 25 14:29:51 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:29:51 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:29:51 2015] [debug] 200 OK (0.016037s, 62.356/s).
+[Mon May 25 14:30:09 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:30:51 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:31:09 2015] [debug] GET "/about_company".
+[Mon May 25 14:31:09 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:31:09 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:31:09 2015] [debug] 200 OK (0.023238s, 43.033/s).
+[Mon May 25 14:31:11 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:31:26 2015] [debug] GET "/about_company".
+[Mon May 25 14:31:26 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:31:26 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:31:26 2015] [debug] 200 OK (0.022430s, 44.583/s).
+[Mon May 25 14:31:29 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:31:49 2015] [debug] GET "/".
+[Mon May 25 14:31:49 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 14:31:49 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 14:31:49 2015] [debug] 200 OK (0.060863s, 16.430/s).
+[Mon May 25 14:31:52 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:32:13 2015] [debug] GET "/about_company".
+[Mon May 25 14:32:13 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:32:13 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:32:13 2015] [debug] 200 OK (0.026241s, 38.108/s).
+[Mon May 25 14:32:15 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:32:54 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:32:54 2015] [debug] GET "/about_company".
+[Mon May 25 14:32:54 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:32:54 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:32:54 2015] [debug] 200 OK (0.017631s, 56.718/s).
+[Mon May 25 14:33:08 2015] [debug] GET "/about_company".
+[Mon May 25 14:33:08 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:33:08 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:33:08 2015] [debug] 200 OK (0.001787s, 559.597/s).
+[Mon May 25 14:33:11 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:33:11 2015] [debug] GET "/about_company".
+[Mon May 25 14:33:11 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:33:11 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:33:11 2015] [debug] 200 OK (0.016108s, 62.081/s).
+[Mon May 25 14:33:18 2015] [debug] GET "/about_company".
+[Mon May 25 14:33:18 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:33:18 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:33:18 2015] [debug] 200 OK (0.001062s, 941.620/s).
+[Mon May 25 14:33:20 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:33:20 2015] [debug] GET "/about_company".
+[Mon May 25 14:33:20 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:33:20 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:33:20 2015] [debug] 200 OK (0.017724s, 56.421/s).
+[Mon May 25 14:33:29 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:33:41 2015] [debug] GET "/about_company".
+[Mon May 25 14:33:41 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:33:41 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:33:41 2015] [debug] 200 OK (0.021379s, 46.775/s).
+[Mon May 25 14:33:43 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:33:43 2015] [debug] GET "/about_company".
+[Mon May 25 14:33:43 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:33:43 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:33:43 2015] [debug] 200 OK (0.018245s, 54.810/s).
+[Mon May 25 14:34:01 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:34:19 2015] [debug] GET "/about_company".
+[Mon May 25 14:34:19 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:34:19 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:34:19 2015] [debug] 200 OK (0.022769s, 43.919/s).
+[Mon May 25 14:34:20 2015] [debug] GET "/about_company".
+[Mon May 25 14:34:20 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:34:20 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:34:20 2015] [debug] 200 OK (0.001639s, 610.128/s).
+[Mon May 25 14:34:22 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:34:22 2015] [debug] GET "/about_company".
+[Mon May 25 14:34:22 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:34:22 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:34:22 2015] [debug] 200 OK (0.016892s, 59.200/s).
+[Mon May 25 14:34:38 2015] [debug] GET "/about_company".
+[Mon May 25 14:34:38 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:34:38 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:34:38 2015] [debug] 200 OK (0.001332s, 750.751/s).
+[Mon May 25 14:34:41 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:34:41 2015] [debug] GET "/about_company".
+[Mon May 25 14:34:41 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:34:41 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:34:41 2015] [debug] 200 OK (0.021077s, 47.445/s).
+[Mon May 25 14:34:48 2015] [debug] GET "/about_company".
+[Mon May 25 14:34:48 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:34:48 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:34:48 2015] [debug] 200 OK (0.001101s, 908.265/s).
+[Mon May 25 14:34:51 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:34:51 2015] [debug] GET "/about_company".
+[Mon May 25 14:34:51 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:34:51 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:34:51 2015] [debug] 200 OK (0.019273s, 51.886/s).
+[Mon May 25 14:34:59 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:35:06 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:35:12 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:35:18 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:35:22 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:35:28 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:35:35 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:35:35 2015] [debug] GET "/about_company".
+[Mon May 25 14:35:35 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:35:35 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:35:35 2015] [debug] 200 OK (0.019160s, 52.192/s).
+[Mon May 25 14:35:38 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:35:47 2015] [debug] GET "/about_company".
+[Mon May 25 14:35:47 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:35:47 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:35:47 2015] [debug] 200 OK (0.022451s, 44.541/s).
+[Mon May 25 14:35:49 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:36:26 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:36:33 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:36:40 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:36:45 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:36:52 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:36:57 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:37:04 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:37:10 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:37:18 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:37:18 2015] [debug] GET "/about_company".
+[Mon May 25 14:37:18 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:37:18 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:37:18 2015] [debug] 200 OK (0.018400s, 54.348/s).
+[Mon May 25 14:37:29 2015] [debug] GET "/about_company".
+[Mon May 25 14:37:29 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:37:29 2015] [debug] Rendering cached template "about_company.html.ep".
+[Mon May 25 14:37:29 2015] [debug] 200 OK (0.001185s, 843.882/s).
+[Mon May 25 14:37:31 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:37:40 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:37:47 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:37:56 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:38:02 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:38:08 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:38:14 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:38:20 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:38:26 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:38:32 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:38:37 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:38:44 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:38:50 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:38:56 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:39:01 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:39:08 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:39:14 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:39:20 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:39:27 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:39:31 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:39:37 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:39:42 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:39:48 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:39:51 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:39:58 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:40:04 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:40:10 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:40:17 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:40:22 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:40:28 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:40:36 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:40:42 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:40:49 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:40:56 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:41:04 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:41:08 2015] [debug] GET "/about_company".
+[Mon May 25 14:41:08 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:41:08 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:41:08 2015] [debug] 200 OK (0.021138s, 47.308/s).
+[Mon May 25 14:41:10 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:41:52 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:42:05 2015] [debug] GET "/about_company".
+[Mon May 25 14:42:05 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:42:05 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:42:05 2015] [debug] 200 OK (0.025393s, 39.381/s).
+[Mon May 25 14:42:08 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:42:08 2015] [debug] GET "/about_company".
+[Mon May 25 14:42:08 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:42:08 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:42:08 2015] [debug] 200 OK (0.018373s, 54.428/s).
+[Mon May 25 14:42:14 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:42:14 2015] [debug] GET "/about_company".
+[Mon May 25 14:42:14 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:42:14 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:42:14 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 14:42:14 2015] [debug] 200 OK (0.021519s, 46.471/s).
+[Mon May 25 14:42:22 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:42:55 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:42:55 2015] [debug] GET "/about_company".
+[Mon May 25 14:42:55 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:42:55 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:42:55 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 14:42:55 2015] [debug] 200 OK (0.022715s, 44.024/s).
+[Mon May 25 14:43:02 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:43:06 2015] [debug] GET "/about_company".
+[Mon May 25 14:43:06 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:43:06 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:43:06 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 14:43:06 2015] [debug] 200 OK (0.023186s, 43.129/s).
+[Mon May 25 14:43:08 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:43:25 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:43:25 2015] [debug] GET "/about_company".
+[Mon May 25 14:43:25 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:43:25 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:43:25 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 14:43:25 2015] [debug] 200 OK (0.020117s, 49.709/s).
+[Mon May 25 14:43:32 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:44:04 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:44:12 2015] [debug] GET "/about_company".
+[Mon May 25 14:44:12 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:44:12 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:44:12 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 14:44:12 2015] [debug] 200 OK (0.034397s, 29.072/s).
+[Mon May 25 14:44:15 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:44:15 2015] [debug] GET "/about_company".
+[Mon May 25 14:44:15 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:44:15 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:44:15 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 14:44:15 2015] [debug] 200 OK (0.022715s, 44.024/s).
+[Mon May 25 14:44:25 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:44:41 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:45:20 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:45:24 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:45:27 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:45:31 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:45:33 2015] [debug] GET "/about_company".
+[Mon May 25 14:45:33 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:45:33 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:45:33 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 14:45:33 2015] [debug] 200 OK (0.024531s, 40.765/s).
+[Mon May 25 14:45:36 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:45:50 2015] [debug] GET "/about_company".
+[Mon May 25 14:45:50 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "about_company".
+[Mon May 25 14:45:50 2015] [debug] Rendering template "about_company.html.ep".
+[Mon May 25 14:45:50 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 14:45:50 2015] [debug] 200 OK (0.021318s, 46.909/s).
+[Mon May 25 14:45:53 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:46:10 2015] [debug] GET "/".
+[Mon May 25 14:46:10 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 14:46:10 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 14:46:10 2015] [debug] 200 OK (0.086751s, 11.527/s).
+[Mon May 25 14:46:12 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:46:13 2015] [debug] GET "/".
+[Mon May 25 14:46:13 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 14:46:13 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 14:46:13 2015] [debug] 200 OK (0.057499s, 17.392/s).
+[Mon May 25 14:47:06 2015] [debug] GET "/".
+[Mon May 25 14:47:06 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 14:47:06 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 25 14:47:06 2015] [debug] 200 OK (0.008269s, 120.934/s).
+[Mon May 25 14:47:08 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:47:28 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:47:39 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:47:54 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:48:22 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:48:37 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:48:40 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:49:03 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:49:37 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:50:08 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:50:35 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:50:40 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:51:16 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:51:52 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:52:31 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:53:15 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:53:19 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:54:02 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:54:56 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:55:35 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:55:38 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:55:42 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:55:45 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:56:26 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:56:49 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:57:29 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:58:07 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:58:47 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 14:59:24 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:00:04 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:00:41 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:01:10 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:01:46 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:02:24 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:02:45 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:02:48 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:06:29 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:06:29 2015] [info] Listening at "http://*:3000".
+[Mon May 25 15:06:29 2015] [debug] GET "/".
+[Mon May 25 15:06:29 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 15:06:29 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 15:06:29 2015] [debug] 200 OK (0.105011s, 9.523/s).
+[Mon May 25 15:06:31 2015] [debug] GET "/".
+[Mon May 25 15:06:31 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 15:06:31 2015] [debug] Rendering cached template "index.html.ep".
+[Mon May 25 15:06:31 2015] [debug] 200 OK (0.008026s, 124.595/s).
+[Mon May 25 15:06:33 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:06:34 2015] [debug] GET "/contacts".
+[Mon May 25 15:06:34 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:06:34 2015] [error] Can't locate object method "get_dilers" via package "GDB::Diler::Manager" (perhaps you forgot to load "GDB::Diler::Manager"?) at d:/Dropbox/GIT/Gift_mobile/mobile/script/../lib/Mobile/Controller/Index.pm line 24.
+
+[Mon May 25 15:06:34 2015] [debug] Template "exception.development.html.ep" not found.
+[Mon May 25 15:06:34 2015] [debug] Template "exception.html.ep" not found.
+[Mon May 25 15:06:34 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon May 25 15:06:34 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon May 25 15:06:34 2015] [debug] 500 Internal Server Error (0.071481s, 13.990/s).
+[Mon May 25 15:06:46 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:06:49 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:07:12 2015] [debug] GET "/contacts".
+[Mon May 25 15:07:12 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:07:12 2015] [error] Can't locate object method "get_dilers" via package "GDB::Diler::Manager" (perhaps you forgot to load "GDB::Diler::Manager"?) at d:/Dropbox/GIT/Gift_mobile/mobile/script/../lib/Mobile/Controller/Index.pm line 24.
+
+[Mon May 25 15:07:12 2015] [debug] Template "exception.development.html.ep" not found.
+[Mon May 25 15:07:12 2015] [debug] Template "exception.html.ep" not found.
+[Mon May 25 15:07:12 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon May 25 15:07:12 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon May 25 15:07:12 2015] [debug] 500 Internal Server Error (0.065988s, 15.154/s).
+[Mon May 25 15:08:23 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:08:23 2015] [debug] GET "/contacts".
+[Mon May 25 15:08:23 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:08:23 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:08:23 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:08:23 2015] [debug] 200 OK (0.046504s, 21.504/s).
+[Mon May 25 15:08:30 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:08:30 2015] [info] Listening at "http://*:3000".
+[Mon May 25 15:08:34 2015] [debug] GET "/contacts".
+[Mon May 25 15:08:34 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:08:34 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:08:34 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:08:34 2015] [debug] 200 OK (0.041259s, 24.237/s).
+[Mon May 25 15:08:36 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:08:36 2015] [debug] GET "/contacts".
+[Mon May 25 15:08:36 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:08:36 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:08:36 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:08:36 2015] [debug] 200 OK (0.027515s, 36.344/s).
+[Mon May 25 15:08:54 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:09:13 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:09:27 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:09:41 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:09:56 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:10:10 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:10:26 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:10:39 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:10:52 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:11:07 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:11:21 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:11:31 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:11:47 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:11:59 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:12:04 2015] [debug] GET "/contacts".
+[Mon May 25 15:12:04 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:12:04 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:12:04 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:12:04 2015] [debug] 200 OK (0.028769s, 34.760/s).
+[Mon May 25 15:12:07 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:12:07 2015] [debug] GET "/contacts".
+[Mon May 25 15:12:07 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:12:07 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:12:07 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:12:07 2015] [debug] 200 OK (0.026511s, 37.720/s).
+[Mon May 25 15:12:16 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:12:17 2015] [debug] GET "/contacts".
+[Mon May 25 15:12:17 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:12:17 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:12:17 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:12:17 2015] [debug] 200 OK (0.030381s, 32.915/s).
+[Mon May 25 15:12:20 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:12:44 2015] [debug] GET "/contacts".
+[Mon May 25 15:12:44 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:12:44 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:12:44 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:12:44 2015] [debug] 200 OK (0.036003s, 27.775/s).
+[Mon May 25 15:12:47 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:13:04 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:13:31 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:13:45 2015] [debug] GET "/".
+[Mon May 25 15:13:45 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 15:13:45 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 15:13:45 2015] [debug] 200 OK (0.069629s, 14.362/s).
+[Mon May 25 15:13:48 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:13:50 2015] [debug] GET "/contacts".
+[Mon May 25 15:13:50 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:13:50 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:13:50 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:13:50 2015] [debug] 200 OK (0.033991s, 29.420/s).
+[Mon May 25 15:13:53 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:13:56 2015] [debug] GET "/".
+[Mon May 25 15:13:56 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 15:13:56 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 15:13:56 2015] [debug] 200 OK (0.077540s, 12.897/s).
+[Mon May 25 15:13:59 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:14:00 2015] [debug] GET "/contacts".
+[Mon May 25 15:14:00 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:14:00 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:14:00 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:14:00 2015] [debug] 200 OK (0.033897s, 29.501/s).
+[Mon May 25 15:14:03 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:14:05 2015] [debug] GET "/".
+[Mon May 25 15:14:05 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 15:14:05 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 15:14:05 2015] [debug] 200 OK (0.070103s, 14.265/s).
+[Mon May 25 15:14:07 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:14:10 2015] [debug] GET "/contacts".
+[Mon May 25 15:14:10 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:14:10 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:14:10 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:14:10 2015] [debug] 200 OK (0.034476s, 29.006/s).
+[Mon May 25 15:14:13 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:15:35 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:17:19 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:18:27 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:19:41 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:19:44 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:21:25 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:22:13 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:22:17 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:22:20 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:22:23 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:22:26 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:22:29 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:22:33 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:22:36 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:22:39 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:22:42 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:22:46 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:22:49 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:22:52 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:22:55 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:23:23 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:23:41 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:23:54 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:24:06 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:24:16 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:24:28 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:25:01 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:25:04 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:25:07 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:26:47 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:27:37 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:27:55 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:28:07 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:28:33 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:28:51 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:29:05 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:29:21 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:29:34 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:29:46 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:30:00 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:30:15 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:30:32 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:30:45 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:30:58 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:31:14 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:31:24 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:31:39 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:31:57 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:32:13 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:32:23 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:32:37 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:32:53 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:33:09 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:33:23 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:33:34 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:33:51 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:34:42 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:34:53 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:35:04 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:35:35 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:35:48 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:35:51 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:36:05 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:36:17 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:36:29 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:36:54 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:37:05 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:37:19 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:37:23 2015] [debug] GET "/contacts".
+[Mon May 25 15:37:23 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:37:23 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:37:23 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:37:23 2015] [debug] 200 OK (0.032594s, 30.680/s).
+[Mon May 25 15:37:23 2015] [debug] GET "/img/style.css".
+[Mon May 25 15:37:23 2015] [debug] Template "not_found.development.html.ep" not found.
+[Mon May 25 15:37:23 2015] [debug] Template "not_found.html.ep" not found.
+[Mon May 25 15:37:23 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon May 25 15:37:23 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon May 25 15:37:23 2015] [debug] 404 Not Found (0.058790s, 17.010/s).
+[Mon May 25 15:37:26 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:37:27 2015] [debug] GET "/contacts".
+[Mon May 25 15:37:27 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:37:27 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:37:27 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:37:27 2015] [debug] 200 OK (0.030400s, 32.895/s).
+[Mon May 25 15:37:27 2015] [debug] GET "/img/style.css".
+[Mon May 25 15:37:27 2015] [debug] Template "not_found.development.html.ep" not found.
+[Mon May 25 15:37:27 2015] [debug] Template "not_found.html.ep" not found.
+[Mon May 25 15:37:27 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon May 25 15:37:27 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon May 25 15:37:27 2015] [debug] 404 Not Found (0.053129s, 18.822/s).
+[Mon May 25 15:37:30 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:37:30 2015] [debug] GET "/contacts".
+[Mon May 25 15:37:30 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:37:30 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:37:30 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:37:30 2015] [debug] 200 OK (0.028698s, 34.846/s).
+[Mon May 25 15:37:30 2015] [debug] GET "/img/style.css".
+[Mon May 25 15:37:30 2015] [debug] Template "not_found.development.html.ep" not found.
+[Mon May 25 15:37:30 2015] [debug] Template "not_found.html.ep" not found.
+[Mon May 25 15:37:30 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon May 25 15:37:30 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon May 25 15:37:30 2015] [debug] 404 Not Found (0.060315s, 16.580/s).
+[Mon May 25 15:37:42 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:37:56 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:38:06 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:38:26 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:38:44 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:38:53 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:39:06 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:39:19 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:39:33 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:40:03 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:40:20 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:40:50 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:41:00 2015] [debug] GET "/contacts".
+[Mon May 25 15:41:00 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:41:00 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:41:00 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:41:00 2015] [debug] 200 OK (0.030557s, 32.726/s).
+[Mon May 25 15:41:02 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:41:02 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:41:02 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:41:02 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:41:02 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:41:02 2015] [debug] 200 OK (0.048805s, 20.490/s).
+[Mon May 25 15:41:53 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:42:03 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:42:16 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:44:14 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:44:14 2015] [info] Listening at "http://*:3000".
+[Mon May 25 15:44:26 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:44:38 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:44:50 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:44:59 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:45:10 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:45:22 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:45:35 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:45:47 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:45:51 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:45:51 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:45:51 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:45:51 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:45:51 2015] [debug] 200 OK (0.053564s, 18.669/s).
+[Mon May 25 15:45:53 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:46:03 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:46:03 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:46:03 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:46:03 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:46:03 2015] [debug] 200 OK (0.029006s, 34.476/s).
+[Mon May 25 15:46:06 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:46:06 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:46:06 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:46:06 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:46:06 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:46:06 2015] [debug] 200 OK (0.028319s, 35.312/s).
+[Mon May 25 15:46:56 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:47:16 2015] [debug] GET "/contacts".
+[Mon May 25 15:47:16 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:47:16 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:47:16 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:47:16 2015] [debug] 200 OK (0.031266s, 31.984/s).
+[Mon May 25 15:47:18 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:47:18 2015] [debug] GET "/contacts/2".
+[Mon May 25 15:47:18 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:47:18 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:47:18 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:47:18 2015] [debug] 200 OK (0.063472s, 15.755/s).
+[Mon May 25 15:47:22 2015] [debug] GET "/contacts".
+[Mon May 25 15:47:22 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:47:22 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:47:22 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:47:22 2015] [debug] 200 OK (0.021158s, 47.263/s).
+[Mon May 25 15:47:26 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:47:26 2015] [debug] GET "/contacts/3".
+[Mon May 25 15:47:26 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:47:26 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:47:26 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:47:26 2015] [debug] 200 OK (0.029358s, 34.062/s).
+[Mon May 25 15:47:27 2015] [debug] GET "/contacts".
+[Mon May 25 15:47:27 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:47:27 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:47:27 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:47:27 2015] [debug] 200 OK (0.023417s, 42.704/s).
+[Mon May 25 15:47:30 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:47:30 2015] [debug] GET "/".
+[Mon May 25 15:47:30 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 15:47:30 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 15:47:30 2015] [debug] 200 OK (0.062283s, 16.056/s).
+[Mon May 25 15:47:34 2015] [debug] GET "/contacts".
+[Mon May 25 15:47:34 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:47:34 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:47:34 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:47:34 2015] [debug] 200 OK (0.017753s, 56.329/s).
+[Mon May 25 15:47:37 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:47:37 2015] [debug] GET "/contacts/5".
+[Mon May 25 15:47:37 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:47:37 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:47:37 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:47:37 2015] [debug] 200 OK (0.029807s, 33.549/s).
+[Mon May 25 15:47:51 2015] [debug] GET "/contacts".
+[Mon May 25 15:47:51 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:47:51 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:47:51 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:47:51 2015] [debug] 200 OK (0.018510s, 54.025/s).
+[Mon May 25 15:47:54 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:47:54 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:47:54 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:47:54 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:47:54 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:47:54 2015] [debug] 200 OK (0.023928s, 41.792/s).
+[Mon May 25 15:47:59 2015] [debug] GET "/contacts".
+[Mon May 25 15:47:59 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:47:59 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:47:59 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:47:59 2015] [debug] 200 OK (0.028147s, 35.528/s).
+[Mon May 25 15:48:01 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:48:01 2015] [debug] GET "/".
+[Mon May 25 15:48:01 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 15:48:01 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 15:48:01 2015] [debug] 200 OK (0.055668s, 17.964/s).
+[Mon May 25 15:49:32 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:51:26 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:52:34 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:53:10 2015] [debug] GET "/".
+[Mon May 25 15:53:10 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 15:53:10 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 15:53:10 2015] [debug] 200 OK (0.067517s, 14.811/s).
+[Mon May 25 15:53:12 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:53:13 2015] [debug] GET "/contacts".
+[Mon May 25 15:53:13 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:53:13 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:53:13 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:53:13 2015] [debug] 200 OK (0.028859s, 34.651/s).
+[Mon May 25 15:53:16 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:53:16 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:53:16 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:53:16 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:53:16 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:53:16 2015] [debug] 200 OK (0.028310s, 35.323/s).
+[Mon May 25 15:53:42 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:55:27 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:55:40 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:56:02 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:56:14 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:56:14 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:56:14 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:56:14 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:56:14 2015] [debug] 200 OK (0.031008s, 32.250/s).
+[Mon May 25 15:56:16 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:56:16 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:56:16 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:56:16 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:56:17 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:56:17 2015] [debug] 200 OK (0.028381s, 35.235/s).
+[Mon May 25 15:56:17 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:56:17 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:56:17 2015] [debug] Rendering cached template "contact.html.ep".
+[Mon May 25 15:56:17 2015] [debug] Rendering cached template "footer.html.ep".
+[Mon May 25 15:56:17 2015] [debug] 200 OK (0.007865s, 127.146/s).
+[Mon May 25 15:56:18 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:56:18 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:56:18 2015] [debug] Rendering cached template "contact.html.ep".
+[Mon May 25 15:56:18 2015] [debug] Rendering cached template "footer.html.ep".
+[Mon May 25 15:56:18 2015] [debug] 200 OK (0.009673s, 103.381/s).
+[Mon May 25 15:56:20 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:56:20 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:56:20 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:56:20 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:56:20 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:56:20 2015] [debug] 200 OK (0.028773s, 34.755/s).
+[Mon May 25 15:56:31 2015] [debug] GET "/contacts".
+[Mon May 25 15:56:31 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:56:31 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:56:31 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:56:31 2015] [debug] 200 OK (0.020616s, 48.506/s).
+[Mon May 25 15:56:33 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:56:33 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:56:33 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:56:33 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:56:33 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:56:33 2015] [debug] 200 OK (0.027216s, 36.743/s).
+[Mon May 25 15:57:53 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:57:53 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:57:53 2015] [debug] Rendering cached template "contact.html.ep".
+[Mon May 25 15:57:53 2015] [debug] Rendering cached template "footer.html.ep".
+[Mon May 25 15:57:53 2015] [debug] 200 OK (0.007387s, 135.373/s).
+[Mon May 25 15:57:56 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:57:56 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:57:56 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:57:56 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:57:56 2015] [error] syntax error at template contact.html.ep line 49, near "->descript $_M "
+44:             
+45:         </nav>
+46: 
+47:             <!--CONTENT-->
+48:             <div class="content">
+49:                 <p><% $cnt->descript %></p>
+50:             </div>
+51:     </div>
+52: 
+53:     <!--FOOTER-->
+54: %= include 'footer'
+
+[Mon May 25 15:57:56 2015] [debug] Template "exception.development.html.ep" not found.
+[Mon May 25 15:57:56 2015] [debug] Template "exception.html.ep" not found.
+[Mon May 25 15:57:56 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon May 25 15:57:56 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon May 25 15:57:56 2015] [debug] 500 Internal Server Error (0.112201s, 8.913/s).
+[Mon May 25 15:58:04 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:58:08 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:58:08 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:58:08 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:58:08 2015] [error] syntax error at template contact.html.ep line 49, near "->descript $_M "
+44:             
+45:         </nav>
+46: 
+47:             <!--CONTENT-->
+48:             <div class="content">
+49:                 <p><% $cnt->descript %></p>
+50:             </div>
+51:     </div>
+52: 
+53:     <!--FOOTER-->
+54: %= include 'footer'
+
+[Mon May 25 15:58:08 2015] [debug] Template "exception.development.html.ep" not found.
+[Mon May 25 15:58:08 2015] [debug] Template "exception.html.ep" not found.
+[Mon May 25 15:58:08 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon May 25 15:58:08 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon May 25 15:58:08 2015] [debug] 500 Internal Server Error (0.103475s, 9.664/s).
+[Mon May 25 15:58:11 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:58:11 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:58:11 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:58:11 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:58:11 2015] [error] syntax error at template contact.html.ep line 49, near "->descript $_M "
+44:             
+45:         </nav>
+46: 
+47:             <!--CONTENT-->
+48:             <div class="content">
+49:                 <p><% $cnt->descript %></p>
+50:             </div>
+51:     </div>
+52: 
+53:     <!--FOOTER-->
+54: %= include 'footer'
+
+[Mon May 25 15:58:11 2015] [debug] Template "exception.development.html.ep" not found.
+[Mon May 25 15:58:11 2015] [debug] Template "exception.html.ep" not found.
+[Mon May 25 15:58:11 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon May 25 15:58:11 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon May 25 15:58:11 2015] [debug] 500 Internal Server Error (0.090380s, 11.064/s).
+[Mon May 25 15:58:16 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:58:22 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:58:22 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:58:22 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:58:22 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:58:22 2015] [debug] 200 OK (0.030870s, 32.394/s).
+[Mon May 25 15:58:25 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:58:32 2015] [debug] GET "/contacts".
+[Mon May 25 15:58:32 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:58:32 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 15:58:32 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:58:32 2015] [debug] 200 OK (0.039193s, 25.515/s).
+[Mon May 25 15:58:34 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:58:34 2015] [debug] GET "/contacts/1".
+[Mon May 25 15:58:34 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 15:58:34 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 15:58:34 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 15:58:34 2015] [debug] 200 OK (0.022754s, 43.948/s).
+[Mon May 25 15:58:54 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 15:59:42 2015] [debug] GET "/".
+[Mon May 25 15:59:42 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 15:59:42 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 15:59:42 2015] [debug] 200 OK (0.064519s, 15.499/s).
+[Mon May 25 15:59:45 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:00:14 2015] [debug] GET "/contacts/1".
+[Mon May 25 16:00:14 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:00:14 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 16:00:14 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 16:00:14 2015] [debug] 200 OK (0.028631s, 34.927/s).
+[Mon May 25 16:00:17 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:00:33 2015] [debug] GET "/contacts/1".
+[Mon May 25 16:00:33 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:00:33 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 16:00:33 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 16:00:33 2015] [debug] 200 OK (0.029079s, 34.389/s).
+[Mon May 25 16:00:35 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:00:52 2015] [debug] GET "/contacts/1".
+[Mon May 25 16:00:52 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:00:52 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 16:00:52 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 16:00:52 2015] [debug] 200 OK (0.034153s, 29.280/s).
+[Mon May 25 16:00:54 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:01:15 2015] [debug] GET "/contacts/1".
+[Mon May 25 16:01:15 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:01:15 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 16:01:15 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 16:01:15 2015] [debug] 200 OK (0.028252s, 35.396/s).
+[Mon May 25 16:01:17 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:01:47 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:02:02 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:02:06 2015] [debug] GET "/".
+[Mon May 25 16:02:06 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 16:02:06 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 16:02:06 2015] [debug] 200 OK (0.069578s, 14.372/s).
+[Mon May 25 16:02:08 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:02:08 2015] [debug] GET "/contacts".
+[Mon May 25 16:02:08 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:02:08 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 16:02:08 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 16:02:08 2015] [debug] 200 OK (0.028178s, 35.489/s).
+[Mon May 25 16:02:08 2015] [debug] GET "/".
+[Mon May 25 16:02:08 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 16:02:08 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 16:02:09 2015] [debug] 200 OK (0.048764s, 20.507/s).
+[Mon May 25 16:02:10 2015] [debug] GET "/contacts/1".
+[Mon May 25 16:02:10 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:02:10 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 16:02:10 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 16:02:10 2015] [debug] 200 OK (0.017881s, 55.925/s).
+[Mon May 25 16:02:13 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:02:16 2015] [debug] GET "/contacts/1".
+[Mon May 25 16:02:16 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:02:16 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 16:02:16 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 16:02:16 2015] [debug] 200 OK (0.023330s, 42.863/s).
+[Mon May 25 16:02:18 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:02:29 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:02:45 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:03:10 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:04:33 2015] [debug] GET "/contacts/1".
+[Mon May 25 16:04:33 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:04:33 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 16:04:33 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 16:04:33 2015] [debug] 200 OK (0.036248s, 27.588/s).
+[Mon May 25 16:04:35 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:04:50 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:05:04 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:05:08 2015] [debug] GET "/contacts/1".
+[Mon May 25 16:05:08 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:05:08 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 16:05:08 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 16:05:08 2015] [debug] 200 OK (0.030796s, 32.472/s).
+[Mon May 25 16:05:11 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:05:21 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:05:26 2015] [debug] GET "/contacts/1".
+[Mon May 25 16:05:26 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:05:26 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 16:05:26 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 16:05:26 2015] [debug] 200 OK (0.037415s, 26.727/s).
+[Mon May 25 16:05:29 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:05:43 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:05:43 2015] [debug] GET "/contacts".
+[Mon May 25 16:05:43 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:05:43 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 16:05:43 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 16:05:43 2015] [debug] 200 OK (0.028180s, 35.486/s).
+[Mon May 25 16:05:44 2015] [debug] GET "/contacts/2".
+[Mon May 25 16:05:44 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:05:44 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 16:05:44 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 16:05:44 2015] [debug] 200 OK (0.018046s, 55.414/s).
+[Mon May 25 16:05:47 2015] [debug] GET "/contacts".
+[Mon May 25 16:05:47 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:05:48 2015] [debug] Rendering cached template "contacts.html.ep".
+[Mon May 25 16:05:48 2015] [debug] Rendering cached template "footer.html.ep".
+[Mon May 25 16:05:48 2015] [debug] 200 OK (0.008501s, 117.633/s).
+[Mon May 25 16:05:50 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".
+[Mon May 25 16:05:50 2015] [debug] GET "/contacts/3".
+[Mon May 25 16:05:50 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:05:50 2015] [debug] Rendering template "contact.html.ep".
+[Mon May 25 16:05:50 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 16:05:50 2015] [debug] 200 OK (0.024444s, 40.910/s).
+[Mon May 25 16:05:52 2015] [debug] GET "/contacts".
+[Mon May 25 16:05:52 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "contacts".
+[Mon May 25 16:05:52 2015] [debug] Rendering template "contacts.html.ep".
+[Mon May 25 16:05:52 2015] [debug] Rendering template "footer.html.ep".
+[Mon May 25 16:05:52 2015] [debug] 200 OK (0.020494s, 48.795/s).
+[Mon May 25 16:05:53 2015] [debug] GET "/".
+[Mon May 25 16:05:53 2015] [debug] Routing to controller "Mobile::Controller::Index" and action "welcome".
+[Mon May 25 16:05:53 2015] [debug] Rendering template "index.html.ep".
+[Mon May 25 16:05:53 2015] [debug] 200 OK (0.050946s, 19.629/s).
+[Mon May 25 16:05:56 2015] [debug] Reading configuration file "D:\Dropbox\GIT\Gift_mobile\mobile\script\app.conf".

@@ -1,0 +1,13 @@
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer_links links">
+            <a class="links_i" href="/about_company">О компании</a>
+            <a class="links_i" href="#">Товары</a>
+            <a class="links_i" href="#">Услуги</a>
+            <a class="links_i" href="/contacts">Контакты</a>
+        </div>
+        <div class="links">
+            <span class="links_i copyright">© 1997-2015 ООО "ГИФТЕК"</span>
+            <a class="links_i desktop-site" href="http://www.giftec.ru/?nomobile">Основной сайт</a>
+        </div>
+    </footer>
