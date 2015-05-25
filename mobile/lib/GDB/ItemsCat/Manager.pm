@@ -1,7 +1,7 @@
 package GDB::ItemsCat::Manager;
 
 use strict;
-
+use lib qw(../..);
 use base qw(Rose::DB::Object::Manager);
 
 use GDB::ItemsCat;

@@ -64,7 +64,7 @@
                 </a>
             </li>
             <li class="nav-list_i">
-                <a class="nav-list_lnk" href="#">
+                <a class="nav-list_lnk" href="/items_by_cat">
                     <div class="nav-list_col">
                         <img class="nav-list_pic" src="/img/menu/image2.png" width="41" height="47" alt=""/>
                     </div>
@@ -75,7 +75,7 @@
                 </a>
             </li>
             <li class="nav-list_i">
-                <a class="nav-list_lnk" href="#">
+                <a class="nav-list_lnk" href="/services_by_cat">
                     <div class="nav-list_col">
                         <img class="nav-list_pic" src="/img/menu/image3.png" width="37" height="42" alt=""/>
                     </div>
@@ -652,18 +652,7 @@
     </div>
 
     <!--FOOTER-->
-    <footer class="footer">
-        <div class="footer_links links">
-            <a class="links_i" href="#">О компании</a>
-            <a class="links_i" href="#">Товары</a>
-            <a class="links_i" href="#">Услуги</a>
-            <a class="links_i" href="#">Контакты</a>
-        </div>
-        <div class="links">
-            <span class="links_i copyright">© 1997-2015 ООО "ГИФТЕК"</span>
-            <a class="links_i desktop-site" href="#">Основной сайт</a>
-        </div>
-    </footer>
+%= include 'footer';
 
     <!--JAVA SCRIPT-->
     <!--libraries-->

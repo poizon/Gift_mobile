@@ -30,6 +30,25 @@ sub contacts {
   }
   
 }
+# товары категории
+sub items_by_cat {
+  my $self = shift;
+  my $categories = GDB::ItemsCat::Manager->get_items_cat(query => [type => 'I']);
+  $self->stash(title => 'Каталоги товаров',
+               url   => 'items_by_cat',
+               categories => $categories);
+  $self->render('categories');  
+}
+
+# услуги категории
+sub services_by_cat {
+  my $self = shift;
+  my $categories = GDB::ItemsCat::Manager->get_items_cat(query => [type => 'S']);
+  $self->stash(title => 'Каталог услуг',
+               url   => 'services_by_cat',
+               categories => $categories);
+  $self->render('categories');  
+}
 
 sub not_found {
   my $self = shift;

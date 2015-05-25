@@ -2,8 +2,8 @@
     <footer class="footer">
         <div class="footer_links links">
             <a class="links_i" href="/about_company">О компании</a>
-            <a class="links_i" href="#">Товары</a>
-            <a class="links_i" href="#">Услуги</a>
+            <a class="links_i" href="/items_by_cat">Товары</a>
+            <a class="links_i" href="/services_by_cat">Услуги</a>
             <a class="links_i" href="/contacts">Контакты</a>
         </div>
         <div class="links">

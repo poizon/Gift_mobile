@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <title><%= $title %></title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/touch-icon-iphone4.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+    <div class="main">
+        <!--HEADER-->
+        <header class="header">
+            <a class="header_logo logo" href="/">
+                <h1 class="logo_name">GIFTEC</h1>
+                <img class="logo_pic" src="/img/logo.png" alt="giftec"/>
+            </a>
+            <nav class="nav-ctrl">
+                <a class="nav-ctrl_i" href="#"><i class="ico-search"></i></a>
+                <a class="nav-ctrl_i" href="#"><i class="ico-cart"></i></a>
+            </nav>
+        </header>
+
+        <!--BREADCRUMBS-->
+        <nav class="breadcrumbs">
+            <div class="breadcrumbs_w">
+                <span class="breadcrumbs_i">
+                    <a class="breadcrumbs_lnk" href="/">Главная</a>
+                </span>
+                <span class="breadcrumbs_i">
+                    <a class="breadcrumbs_lnk __active" href="javascript:void(0);"><%= $title %></a>
+                </span>
+            </div>
+        </nav>
+
+        <!--SUB MENU-->
+        <ul class="categories">
+            % for my $cat(@$categories) {
+            <li class="categories_i">
+                <a class="categories_lnk" href="/<%= $url %>/<%= $cat->id %>"><%= $cat->descript%></a>
+            </li>
+            %}
+        </ul>
+    </div>
+
+    <!--FOOTER-->
+=% include 'footer'
+
+    <!--JAVA SCRIPT-->
+    <!--libraries-->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <!--plugins-->
+    <!--scripts-->
+    <script src="/js/main.js"></script>
+</body>
+</html>
