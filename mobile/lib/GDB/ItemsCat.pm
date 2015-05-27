@@ -9,11 +9,14 @@ __PACKAGE__->meta->setup(
 
     columns => [
         id       => { type => 'serial', not_null => 1 },
+        sub_id   => { type => 'serial', default => 0 },
         type     => { type => 'character', length => 1 },
         descript => { type => 'varchar', length => 45 },
+        chpurl => { type => 'varchar', length => 45 },
     ],
 
     primary_key_columns => [ 'id' ],
+    unique_key => [ 'chpurl' ],
 );
 
 1;

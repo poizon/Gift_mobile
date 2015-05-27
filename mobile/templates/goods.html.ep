@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
-    <title><%= $title %></title>
+    <title>Принтеры</title>
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/img/touch-icon.png">
@@ -32,39 +32,64 @@
                 <span class="breadcrumbs_i">
                     <a class="breadcrumbs_lnk" href="/">Главная</a>
                 </span>
-                %if ($breadcrumbs) {
                  <span class="breadcrumbs_i">
                     <a class="breadcrumbs_lnk" href="/items_by_cat"><%= $title %></a>
+                </span>
+                  <span class="breadcrumbs_i">
+                    <a class="breadcrumbs_lnk" href="/shop/<%= $sub_url %>"><%= $sub_name %></a>
                 </span>
                 <span class="breadcrumbs_i">
                     <a class="breadcrumbs_lnk __active" href="javascript:void(0);"><%= $breadcrumbs %></a>
                 </span>
-                %} else {
-                <span class="breadcrumbs_i">
-                    <a class="breadcrumbs_lnk __active" href="javascript:void(0);"><%= $title %></a>
-                </span>
-                %}
             </div>
         </nav>
 
-        <!--SUB MENU-->
-        <ul class="categories">
-            % for my $cat(@$categories) {
-            <li class="categories_i">
-                <a class="categories_lnk" href="/shop/<%= $cat->chpurl %>"><%= $cat->descript%></a>
+        <!--GOOGS LIST-->
+        <ul class="goods">
+            % for my $i(@$items) {
+            <li class="goods_i flags">
+                <a class="goods_lnk" href="/item_card/<%= $i->id %>">
+                    <div class="goods_pic">
+                        <img src="/img/content/<%= $i->main_img %>" alt=""/>
+                    </div>
+                    <div class="goods_col">
+                        <div class="goods_price"><%= $i->price %> руб.</div>
+                        % if($i->old_price > 0) {
+                        <div class="goods_old-price">
+                            Старая цена: <span class="goods_comp-price"><%= $i->old_price %> руб.</span>
+                        </div>
+                        %}
+                        <div class="goods_name"><%= $i->name %></div>
+                        <div class="goods_note"><%= $i->note %></div>
+                    </div>
+                </a>
+                %if($i->new_item) {
+                <span class="goods_flag flag">Новинка</span>
+                %} elsif($i->action) {
+                <span class="goods_flag flag __rollback">Акция</span>
+                %} elsif($i->popular) {
+                <span class="goods_flag flag __bestseller">Популярное</span>
+                %}
             </li>
             %}
         </ul>
     </div>
 
     <!--FOOTER-->
-=% include 'footer'
-
+%= include 'footer';
+	
+    <a href="#top" id="toTop"></a>
     <!--JAVA SCRIPT-->
     <!--libraries-->
     <script src="/js/jquery-1.11.1.min.js"></script>
     <!--plugins-->
+    <script src="/js/jquery.scrollToTop.js"></script>
     <!--scripts-->
+    <script>
+        $(function() {
+            $("#toTop").scrollToTop({offset: 500});
+        });
+    </script>
     <script src="/js/main.js"></script>
 </body>
 </html>

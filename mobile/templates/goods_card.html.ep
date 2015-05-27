@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <title>Карточка товара</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/touch-icon-iphone4.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/jquery.bxslider.css"/>
+    <link rel="stylesheet" href="/css/flexslider.css"/>
+</head>
+<body>
+    <div class="main">
+        <!--HEADER-->
+        <header class="header">
+            <a class="header_logo logo" href="/">
+                <h1 class="logo_name">GIFTEC</h1>
+                <img class="logo_pic" src="/img/logo.png" alt="giftec"/>
+            </a>
+            <nav class="nav-ctrl">
+                <a class="nav-ctrl_i" href="#"><i class="ico-search"></i></a>
+                <a class="nav-ctrl_i" href="#"><i class="ico-cart"></i></a>
+            </nav>
+        </header>
+
+        <!--BREADCRUMBS-->
+        <nav class="breadcrumbs">
+            <div class="breadcrumbs_w">
+                <span class="breadcrumbs_i">
+                    <a class="breadcrumbs_lnk __active" href="javascript:void(0);">Принтеры</a>
+                </span>
+            </div>
+        </nav>
+
+        <!--CARD HEEADER-->
+        <div class="card-head">
+            <!--goods HEAD INFO-->
+            <div class="card-head_info">
+                <h2 class="page-header"><%= $item->name %></h2>
+                <div class="goods_price"><%= $item->price %> руб</div>
+                <div class="goods_old-price"><%= $item->old_price %> руб.</div>
+                <div class="flags">
+                    %if($item->action) {
+                    <span class="flag __rollback">Акция</span>
+                    %} elsif($item->popular){
+                    <span class="flag __bestseller">Популярное</span>
+                    %} elsif($item->new_item) {
+                    <span class="flag __new">Новинка</span>
+                    %}
+                </div>
+            </div>
+        </div>
+
+        <!--CARD SLIDER-->
+        <div id="card-slider" class="card-slider flexslider">
+            <ul class="slides">
+                <li><img src="/img/content/card1-full.jpg" alt=""/></li>
+                <li><img src="/img/content/card2-full.jpg" alt=""/></li>
+                <li><img src="/img/content/card3-full.jpg" alt=""/></li>
+                <li><img src="/img/content/card4-full.jpg" alt=""/></li>
+            </ul>
+        </div>
+
+        <!--CARD CAROUSEL-->
+        <div id="card-carousel" class="card-carousel flexslider">
+            <ul class="slides">
+                <li>
+                    <div class="card-carousel_thumb __active">
+                        <img src="/img/content/card1.jpg" alt=""/>
+                    </div>
+                </li>
+                <li>
+                    <div class="card-carousel_thumb">
+                        <img src="/img/content/card2.gif" alt=""/>
+                    </div>
+                </li>
+                <li>
+                    <div class="card-carousel_thumb">
+                        <img src="/img/content/card3.jpg" alt=""/>
+                    </div>
+                </li>
+                <li>
+                    <div class="card-carousel_thumb">
+                        <img src="/img/content/card4.jpg" alt=""/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!--ADD TO CART-->
+        <div class="card-add container">
+            <button type="button" class="btn __primary">Добавить в корзину</button>
+            <div class="status-mesages">
+                <span class="status-message __free-shipping">Бесплатная доставка</span>
+                <span class="status-message __store-pickup">Бесплатная установка</span>
+            </div>
+        </div>
+
+        <!--CARD DESCRIPTION-->
+
+        <div class="card-desc item-section read-more __closed">
+            <h2 class="section-header __bg read-more_btn-w">
+                <span class="section-header_t">Детальное описание</span>
+                <button class="read-more_btn __closed">Развернуть</button>
+            </h2>
+
+            <!--CONTENT-->
+            <div class="content">
+                <p><b><%= $item->name %></b></p>
+                <%== $item->descript %>
+                <br>
+                <!--FEATURES-->
+                <div class="features">
+                    <h3 class="features_t">Технические характеристики</h3>
+                    <table class="features_table">
+                        <tbody>
+                            
+                            <tr>
+                                <td class="features_name">Service Carrier:</td>
+                                <td>Straight Talk</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!--Viewers Ultimately Bought-->
+        <section class="additional">
+            <h2 class="additional_t section-header __bg">Сопутствующие товары</h2>
+            <ul id="carousel-like">
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod1.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod2.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_rating rating">
+                            <div class="rating_wrap">
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __partial __part5"></span>
+                                <span class="rating_star"></span>
+                                <span class="rating_star"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod3.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_rating rating">
+                            <div class="rating_wrap">
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __partial __part5"></span>
+                                <span class="rating_star"></span>
+                                <span class="rating_star"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod4.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_rating rating">
+                            <div class="rating_wrap">
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __partial __part5"></span>
+                                <span class="rating_star"></span>
+                                <span class="rating_star"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod5.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_rating rating">
+                            <div class="rating_wrap">
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __partial __part5"></span>
+                                <span class="rating_star"></span>
+                                <span class="rating_star"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod6.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_rating rating">
+                            <div class="rating_wrap">
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __partial __part5"></span>
+                                <span class="rating_star"></span>
+                                <span class="rating_star"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod7.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_rating rating">
+                            <div class="rating_wrap">
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __partial __part5"></span>
+                                <span class="rating_star"></span>
+                                <span class="rating_star"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod8.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_rating rating">
+                            <div class="rating_wrap">
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __partial __part5"></span>
+                                <span class="rating_star"></span>
+                                <span class="rating_star"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod9.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_rating rating">
+                            <div class="rating_wrap">
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __partial __part5"></span>
+                                <span class="rating_star"></span>
+                                <span class="rating_star"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod10.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_rating rating">
+                            <div class="rating_wrap">
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __partial __part5"></span>
+                                <span class="rating_star"></span>
+                                <span class="rating_star"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod16.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_rating rating">
+                            <div class="rating_wrap">
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __partial __part5"></span>
+                                <span class="rating_star"></span>
+                                <span class="rating_star"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod17.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_rating rating">
+                            <div class="rating_wrap">
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __partial __part5"></span>
+                                <span class="rating_star"></span>
+                                <span class="rating_star"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod18.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_rating rating">
+                            <div class="rating_wrap">
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __partial __part5"></span>
+                                <span class="rating_star"></span>
+                                <span class="rating_star"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod19.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_rating rating">
+                            <div class="rating_wrap">
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __partial __part5"></span>
+                                <span class="rating_star"></span>
+                                <span class="rating_star"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="additional_i" href="#">
+                        <div class="additional_pic goods_pic">
+                            <img src="/img/content/prod20.jpg" alt=""/>
+                        </div>
+                        <div class="additional_name">Ironman H-Class 610 Smart Technology Elliptical Trainer with Bluetooth, 18" Stride and Heart Rate Control</div>
+                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_rating rating">
+                            <div class="rating_wrap">
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __rated"></span>
+                                <span class="rating_star __partial __part5"></span>
+                                <span class="rating_star"></span>
+                                <span class="rating_star"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <!--FOOTER-->
+%= include 'footer'
+
+    <!--JAVA SCRIPT-->
+    <!--libraries-->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <!--plugins-->
+    <script src="/js/jquery.bxslider.min.js"></script>
+    <script src="/js/jquery.flexslider-min.js"></script>
+    <!--scripts-->
+    <script>
+        $(function(){
+            $('#main-banner').bxSlider({
+                controls: false,
+                adaptiveHeight: true,
+                auto: true,
+                pause: 5000
+            });
+
+            $('#carousel-like').bxSlider({
+                slideWidth: 130,
+                minSlides: 1,
+                maxSlides: 20,
+                slideMargin: 0,
+                moveSlides: 3,
+                pager: false
+            });
+
+            $('#carousel-featured').bxSlider({
+                slideWidth: 130,
+                minSlides: 1,
+                maxSlides: 20,
+                slideMargin: 0,
+                moveSlides: 3,
+                pager: false
+            });
+        })
+    </script>
+    <script>
+        $(function(){
+            $('#card-carousel').flexslider({
+                animation: 'slide',
+                minItems: 3,
+                maxItems: 3,
+                slideshow: false,
+                itemWidth: 60,
+                itemMargin: 0,
+                move: 1,
+                controlNav: false,
+                asNavFor: '#card-slider'
+            });
+
+            $('#card-slider').flexslider({
+                animation: "slide",
+                directionNav: false,
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                sync: "#card-carousel",
+                after: function(){
+                    //Выделение активного элемента карусели (карточка товара)
+                    $('#card-slider').find('.slides').find('li').each(function(i){
+                        if ($(this).hasClass('flex-active-slide')){
+                            var $carousel = $('#card-carousel').find('.slides').find('li');
+                            $carousel
+                                .find('.__active').removeClass('__active')
+                                .end().eq(i).find('.card-carousel_thumb').addClass('__active');
+
+                            return this;
+                        }
+                    })
+                }
+            });
+        });
+    </script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

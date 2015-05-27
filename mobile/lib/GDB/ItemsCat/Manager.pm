@@ -10,5 +10,6 @@ sub object_class { 'GDB::ItemsCat' }
 
 __PACKAGE__->make_manager_methods('items_cat');
 
+
 1;
 

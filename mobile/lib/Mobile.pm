@@ -5,7 +5,9 @@ use GDB::DB::Object::AutoBase2;
 use GDB::Slider::Manager;
 use GDB::Diler::Manager;
 use GDB::ItemsCat::Manager;
-
+use GDB::Item::Manager;
+use GDB::ItemsImage::Manager;
+use GDB::ItemSpec::Manager;
 $ENV{MOJO_CONFIG} = 'script/app.conf';
 # This method will run once at server start
 sub startup {
@@ -26,7 +28,8 @@ sub startup {
   $r->get('/items_by_cat')->to('index#items_by_cat');
   $r->get('/services_by_cat')->to('index#services_by_cat');
   $r->get('/not_found')->to('index#not_found');
-  
+  $r->get('/shop/:name')->to('index#shop');
+  $r->get('/item_card/:id')->to('index#item_card');
 }
 
 1;
