@@ -81,15 +81,18 @@ CREATE TABLE `items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` char(1) DEFAULT NULL,
   `cat` int(11) DEFAULT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `note` varchar(100) DEFAULT NULL,
   `descript` text,
   `price` decimal(10,2) DEFAULT NULL,
   `old_price` decimal(10,2) DEFAULT NULL,
   `action` char(1) DEFAULT NULL,
   `popular` char(1) DEFAULT NULL,
   `new_item` char(1) DEFAULT NULL,
+  `main_img` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `ITEMS` (`id`,`type`,`cat`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  KEY `ITEMS` (`id`,`type`,`cat`,`name`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,6 +101,7 @@ CREATE TABLE `items` (
 
 LOCK TABLES `items` WRITE;
 /*!40000 ALTER TABLE `items` DISABLE KEYS */;
+INSERT INTO `items` VALUES (1,'I',19,'AZON DTS White','Бесплатная доставка и установка','Печать белым цветом на любом материале с помощью принтера AZON DTS White.\n<ul>\n<li>\nНовинка в серии принтеров AZON DTS. Теперь появилась возможность печатать белым цветом на любом материале.\n</li>\n<li>AZON DTS демонстрирует качественную печать на всех видах цветных и тёмных материалов.</li>\n<li>Принтер исключительно прост в использовании.</li>\n<li>Новые «наноцветовые» пигменты проникают в структуру любого материала, обеспечивая\nнасыщенные яркие изображения.</li>\n<li>DTS White печатает каплями трёх размеров.</li>\n<li>Максимальная толщина запечатываемого материала составляет 10 см.</li>\n<li>Поверхности могут быть гладкими или шероховатыми, плоскими или изогнутыми. </li>\n<li>Для печати подойдут дерево,пластик, камень, стекло, керамика, кожа, металл и другие материалы.</li>\n</ul>','500000.00','0.00','0','0','1','prod1.jpg'),(2,'I',19,'AZON DTS','Бесплатная доставка и установка','Azon DTS – это струйный принтер, печатающий напрямую на стекле, металле, камне, дереве, пластике и других материалах. С его помощью можно получить качественные, полноцветные изображения на любой поверхности быстрее и дешевле, чем с помощью других способов печати. Возможна печать на готовых пластмассовых изделиях, таких как ручки, зажигалки, мобильные телефоны, пластиковые карты и др. Исключительно высокое разрешение 2880.','550000.00','560000.00','1','0','0','prod16.jpg'),(3,'I',12,'Безворсовые салфетки','Оптом - дешевле!','Cалфетки Berkshire сделаны из полиэстеровых нитей, сотканных по технологии «double knit» (двойное плетение). Особое плетение и специальный способ обработки сжатым воздухом позволяют избежать появления ворсинок и микрочастиц на поверхности ткани.','5000.00','8000.00','0','1','0','satpax.jpg');
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -110,10 +114,14 @@ DROP TABLE IF EXISTS `items_cat`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `items_cat` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sub_id` int(11) DEFAULT '0',
   `type` char(1) DEFAULT NULL COMMENT '''услуга/товар''',
   `descript` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `chpurl` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `chpurl_UNIQUE` (`chpurl`),
+  KEY `SUBID` (`sub_id`,`chpurl`)
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,6 +130,7 @@ CREATE TABLE `items_cat` (
 
 LOCK TABLES `items_cat` WRITE;
 /*!40000 ALTER TABLE `items_cat` DISABLE KEYS */;
+INSERT INTO `items_cat` VALUES (1,0,'I','Рулонные материалы','rulonnye_materialy'),(2,0,'I','Принтеры','printery'),(3,0,'I','Обрабатывающие центры','obrabatyvayuschie-centry'),(4,0,'I','Листовые материалы','listovye_materialy'),(5,0,'I','Световозврат','svetovozvrat'),(6,0,'I','Планшетные ламинаторы RollsRoller','planshetnye_laminatory'),(7,0,'I','Чернила','uf-chernila'),(8,0,'I','Подержанное печатное оборудование','bu_oborudovanie'),(9,0,'I','Оборудование для этикеток','oborudovanie_dlya__etiketok'),(10,0,'I','Режущие плоттеры','rezhushhie_plottery'),(11,0,'I','Технические материалы','tehnicheskie_materialy'),(12,0,'I','Безворсовые салфетки','bezvorsovye_salfetki'),(13,0,'I','Запчасти','zapchasty'),(14,0,'S','Перемотка и резка','peremotka_i_rezka'),(15,0,'S','Сервис','servis'),(16,2,'I','GT Print','interernye_printery'),(17,2,'I','Matan Barak','matan_barak'),(18,2,'I','swissQprint','swissqprint'),(19,2,'I','AZON','azon'),(20,2,'I','HP Latex','lateksnye_printery_hp_latex');
 /*!40000 ALTER TABLE `items_cat` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -140,7 +149,7 @@ CREATE TABLE `items_images` (
   `image_url` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `IDITEM` (`id_item`,`image_url`,`main`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -149,6 +158,7 @@ CREATE TABLE `items_images` (
 
 LOCK TABLES `items_images` WRITE;
 /*!40000 ALTER TABLE `items_images` DISABLE KEYS */;
+INSERT INTO `items_images` VALUES (1,1,'1',NULL,'prod1.jpg'),(2,2,'1',NULL,'prod16.jpg');
 /*!40000 ALTER TABLE `items_images` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -241,4 +251,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-25 17:07:41
+-- Dump completed on 2015-05-27 17:34:35
