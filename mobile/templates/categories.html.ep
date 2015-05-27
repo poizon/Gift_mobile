@@ -58,7 +58,7 @@
     </div>
 
     <!--FOOTER-->
-=% include 'footer'
+%= include 'footer'
 
     <!--JAVA SCRIPT-->
     <!--libraries-->

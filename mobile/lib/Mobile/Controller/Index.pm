@@ -34,7 +34,7 @@ sub contacts {
 sub items_by_cat {
   my $self = shift;
   my $categories = GDB::ItemsCat::Manager->get_items_cat(query => [type => 'I', sub_id => 0]);
-  $self->stash(title => 'Каталоги товаров',
+  $self->stash(title => 'Товары',
                breadcrumbs => '',
                categories => $categories);
   $self->render('categories');  
@@ -44,7 +44,7 @@ sub items_by_cat {
 sub services_by_cat {
   my $self = shift;
   my $categories = GDB::ItemsCat::Manager->get_items_cat(query => [type => 'S']);
-  $self->stash(title => 'Каталог услуг',
+  $self->stash(title => 'Услуги',
                breadcrumbs => '',
                categories => $categories);
   $self->render('categories');  
@@ -59,7 +59,7 @@ sub shop {
   my ($breadcrumbs, $title, $id);
   if ($cat_req->load(speculative => 1)) {
       $breadcrumbs = $cat_req->descript;
-      $title = ($cat_req->type eq 'I') ?  'Каталоги товаров' : 'Каталог услуг';
+      $title = ($cat_req->type eq 'I') ?  'Товары' : 'Услуги';
       $id = $cat_req->id;
   } else {
     $self->redirect_to('/not_found');
