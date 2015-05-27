@@ -43,7 +43,7 @@
             <div class="card-head_info">
                 <h2 class="page-header"><%= $item->name %></h2>
                 <div class="goods_price"><%= $item->price %> руб</div>
-                <div class="goods_old-price"><%= $item->old_price %> руб.</div>
+                <div class="goods_old-price">Старая цена: <span class="goods_comp-price"><%= $item->old_price %> руб.</span></div>
                 <div class="flags">
                     %if($item->action) {
                     <span class="flag __rollback">Акция</span>
