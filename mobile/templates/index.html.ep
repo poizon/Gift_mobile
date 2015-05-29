@@ -31,7 +31,7 @@
         <div class="search">
             <form class="search-form" autocomplete="off">
                 <div class="search-form_field">
-                    <input id="search-text" type="search" class="search-form_text" placeholder="Что вы хотели бы найти?" value="">
+                    <input id="search-text" type="search" class="search-form_text" placeholder="Что бы вы хотели найти?" value="">
                     <button id="search-clear" type="button" class="search-form_clear"></button>
                 </div>
                 <button type="submit" class="search-form_btn btn __secondary">Поиск</button>

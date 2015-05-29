@@ -1097,7 +1097,7 @@ $ico-2x-sprite-dimensions: true;
 .status-message.__free-shipping {
   padding-left: 39.6px;
   padding-right: 10px;
-  background-image: url("../img/shipping.png");
+  background-image: url("../img/free.png");
   -moz-background-size: 33px 25px;
   -o-background-size: 33px 25px;
   -webkit-background-size: 33px 25px;
@@ -1105,7 +1105,7 @@ $ico-2x-sprite-dimensions: true;
 }
 .status-message.__store-pickup {
   padding-left: 44px;
-  background-image: url("../img/pickup.png");
+  background-image: url("../img/free.png");
   -moz-background-size: 36px 24px;
   -o-background-size: 36px 24px;
   -webkit-background-size: 36px 24px;

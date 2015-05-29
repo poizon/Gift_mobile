@@ -31,9 +31,23 @@
         <!--BREADCRUMBS-->
         <nav class="breadcrumbs">
             <div class="breadcrumbs_w">
-                <span class="breadcrumbs_i">
-                    <a class="breadcrumbs_lnk __active" href="javascript:void(0);">Принтеры</a>
+                                <span class="breadcrumbs_i">
+                    <a class="breadcrumbs_lnk" href="/">Главная</a>
                 </span>
+                <span class="breadcrumbs_i">
+                    <a class="breadcrumbs_lnk" href="/<%= $url_title %>"><%= $title %></a>
+                </span>
+                % if($main_cat) {
+                <span class="breadcrumbs_i">
+                    <a class="breadcrumbs_lnk" href="/shop/<%= $main_cat->chpurl %>"><%= $main_cat->descript %></a>
+                </span>
+                %}
+                
+                % if($cat_name ne $item->name) {
+                  <span class="breadcrumbs_i">
+                    <a class="breadcrumbs_lnk" href="/shop/<%= $cat_url %>"><%= $cat_name %></a>
+                </span>
+                % }
             </div>
         </nav>
 
@@ -43,7 +57,9 @@
             <div class="card-head_info">
                 <h2 class="page-header"><%= $item->name %></h2>
                 <div class="goods_price"><%= $item->price %> руб</div>
+                % if ($item->old_price>0) {
                 <div class="goods_old-price">Старая цена: <span class="goods_comp-price"><%= $item->old_price %> руб.</span></div>
+                %}
                 <div class="flags">
                     %if($item->action) {
                     <span class="flag __rollback">Акция</span>
@@ -59,10 +75,10 @@
         <!--CARD SLIDER-->
         <div id="card-slider" class="card-slider flexslider">
             <ul class="slides">
-                <li><img src="/img/content/card1-full.jpg" alt=""/></li>
-                <li><img src="/img/content/card2-full.jpg" alt=""/></li>
-                <li><img src="/img/content/card3-full.jpg" alt=""/></li>
-                <li><img src="/img/content/card4-full.jpg" alt=""/></li>
+                <li><img src="/img/content/<%= $item->main_img %>" alt=""/></li>
+             % for my $img(@$images) {    
+                <li><img src="/img/content/<%= $img->image_url %>" alt="<%= $img->descript %>"/></li>
+             % }
             </ul>
         </div>
 
@@ -71,24 +87,16 @@
             <ul class="slides">
                 <li>
                     <div class="card-carousel_thumb __active">
-                        <img src="/img/content/card1.jpg" alt=""/>
+                        <img src="/img/content/thumbnails/<%= $item->main_img %>" alt=""/>
                     </div>
                 </li>
+            % for my $img(@$images) {    
                 <li>
                     <div class="card-carousel_thumb">
-                        <img src="/img/content/card2.gif" alt=""/>
+                        <img src="/img/content/thumbnails/<%= $img->image_url %>" alt="<%= $img->descript %>"/>
                     </div>
                 </li>
-                <li>
-                    <div class="card-carousel_thumb">
-                        <img src="/img/content/card3.jpg" alt=""/>
-                    </div>
-                </li>
-                <li>
-                    <div class="card-carousel_thumb">
-                        <img src="/img/content/card4.jpg" alt=""/>
-                    </div>
-                </li>
+            % }    
             </ul>
         </div>
 
@@ -96,8 +104,9 @@
         <div class="card-add container">
             <button type="button" class="btn __primary">Добавить в корзину</button>
             <div class="status-mesages">
-                <span class="status-message __free-shipping">Бесплатная доставка</span>
-                <span class="status-message __store-pickup">Бесплатная установка</span>
+                % for my $b(@$bonus) {
+                <span class="status-message __free-shipping"><%= $b->bid->descript %></span>
+                %}
             </div>
         </div>
 
@@ -119,12 +128,12 @@
                     <h3 class="features_t">Технические характеристики</h3>
                     <table class="features_table">
                         <tbody>
-                            
+                            % for my $s(@$spec) {
                             <tr>
-                                <td class="features_name">Service Carrier:</td>
-                                <td>Straight Talk</td>
+                                <td class="features_name"><%= $s->name %></td>
+                                <td><%= $s->descript %></td>
                             </tr>
-                            
+                            %}
                         </tbody>
                     </table>
                 </div>

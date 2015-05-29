@@ -8,6 +8,8 @@ use GDB::ItemsCat::Manager;
 use GDB::Item::Manager;
 use GDB::ItemsImage::Manager;
 use GDB::ItemSpec::Manager;
+use GDB::ItemsBonu::Manager;
+use GDB::Bonus::Manager;
 $ENV{MOJO_CONFIG} = 'script/app.conf';
 # This method will run once at server start
 sub startup {

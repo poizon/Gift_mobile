@@ -34,7 +34,7 @@
                 </span>
                 %if ($breadcrumbs) {
                  <span class="breadcrumbs_i">
-                    <a class="breadcrumbs_lnk" href="/items_by_cat"><%= $title %></a>
+                    <a class="breadcrumbs_lnk" href="/<%= $url_title %>"><%= $title %></a>
                 </span>
                 <span class="breadcrumbs_i">
                     <a class="breadcrumbs_lnk __active" href="javascript:void(0);"><%= $breadcrumbs %></a>
