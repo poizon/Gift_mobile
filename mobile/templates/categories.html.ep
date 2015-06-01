@@ -15,16 +15,7 @@
 <body>
     <div class="main">
         <!--HEADER-->
-        <header class="header">
-            <a class="header_logo logo" href="/">
-                <h1 class="logo_name">GIFTEC</h1>
-                <img class="logo_pic" src="/img/logo.png" alt="giftec"/>
-            </a>
-            <nav class="nav-ctrl">
-                <a class="nav-ctrl_i" href="#"><i class="ico-search"></i></a>
-                <a class="nav-ctrl_i" href="#"><i class="ico-cart"></i></a>
-            </nav>
-        </header>
+%= include 'header';
 
         <!--BREADCRUMBS-->
         <nav class="breadcrumbs">

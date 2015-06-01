@@ -1,15 +1,19 @@
 package Mobile;
 use Mojo::Base 'Mojolicious';
-use GDB::DB::Object::AutoBase2;
 
+use GDB::DB::Object::AutoBase2;
 use GDB::Slider::Manager;
 use GDB::Diler::Manager;
 use GDB::ItemsCat::Manager;
 use GDB::Item::Manager;
 use GDB::ItemsImage::Manager;
-use GDB::ItemSpec::Manager;
+use GDB::ItemsSpec::Manager;
 use GDB::ItemsBonu::Manager;
 use GDB::Bonus::Manager;
+use GDB::ItemsRelated::Manager;
+use GDB::Order::Manager;
+use GDB::Card::Manager;
+
 $ENV{MOJO_CONFIG} = 'script/app.conf';
 # This method will run once at server start
 sub startup {
@@ -32,6 +36,8 @@ sub startup {
   $r->get('/not_found')->to('index#not_found');
   $r->get('/shop/:name')->to('index#shop');
   $r->get('/item_card/:id')->to('index#item_card');
+  $r->get('/add_to_card/:id' => {id => 0})->to('index#add_to_card');
+  
 }
 
 1;

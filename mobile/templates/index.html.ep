@@ -16,14 +16,21 @@
 <body>
     <div class="main">
         <!--HEADER-->
-        <header class="header">
+<header class="header">
             <a class="header_logo logo" href="/">
                 <h1 class="logo_name">GIFTEC</h1>
                 <img class="logo_pic" src="/img/logo.png" alt="giftec"/>
             </a>
             <nav class="nav-ctrl">
-                <a class="nav-ctrl_i" href="#"><i class="ico-search"></i></a>
-                <a class="nav-ctrl_i" href="#"><i class="ico-cart"></i></a>
+                % if($card_col) {
+                <a class="nav-ctrl_i __show-cart" href="/add_to_card/">
+                    <i class="ico-cart"></i>
+                    <div class="cart-size"><span class="cart-size_text"><%= $card_col %></span></div>
+                </a>
+                %} else {
+                <a class="nav-ctrl_i" href="/add_to_card/"><i class="ico-cart"></i></a>
+                %}
+                
             </nav>
         </header>
 
@@ -100,283 +107,34 @@
 
         <!--You Might Like-->
         <section class="additional">
-            <h2 class="additional_t section-header">Вас могут заинтересовать</h2>
+            <h2 class="additional_t section-header">Наши акции:</h2>
             <ul id="carousel-like">
+		% for my $item(@$action) {
                 <li>
-                    <a class="additional_i" href="#">
+                    <a class="additional_i" href="/item_card/<%= $item->id %>">
                         <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod1.jpg" alt=""/>
+                            <img src="/img/content/thumbnails/<%= $item->main_img %>" alt="<%= $item->note %>"/>
                         </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
+                        <div class="additional_name"><%= $item->name %></div>
+                        <div class="additional_price goods_price"><%= $item->price %></div>
                     </a>
                 </li>
-                <li>
-                    <a class="additional_i" href="#">
-                        <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod2.jpg" alt=""/>
-                        </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
-                        <div class="additional_rating rating">
-                            <div class="rating_wrap">
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __partial __part5"></span>
-                                <span class="rating_star"></span>
-                                <span class="rating_star"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="additional_i" href="#">
-                        <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod3.jpg" alt=""/>
-                        </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
-                        <div class="additional_rating rating">
-                            <div class="rating_wrap">
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __partial __part5"></span>
-                                <span class="rating_star"></span>
-                                <span class="rating_star"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="additional_i" href="#">
-                        <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod4.jpg" alt=""/>
-                        </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
-                        <div class="additional_rating rating">
-                            <div class="rating_wrap">
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __partial __part5"></span>
-                                <span class="rating_star"></span>
-                                <span class="rating_star"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="additional_i" href="#">
-                        <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod5.jpg" alt=""/>
-                        </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
-                        <div class="additional_rating rating">
-                            <div class="rating_wrap">
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __partial __part5"></span>
-                                <span class="rating_star"></span>
-                                <span class="rating_star"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="additional_i" href="#">
-                        <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod6.jpg" alt=""/>
-                        </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
-                        <div class="additional_rating rating">
-                            <div class="rating_wrap">
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __partial __part5"></span>
-                                <span class="rating_star"></span>
-                                <span class="rating_star"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="additional_i" href="#">
-                        <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod7.jpg" alt=""/>
-                        </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
-                        <div class="additional_rating rating">
-                            <div class="rating_wrap">
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __partial __part5"></span>
-                                <span class="rating_star"></span>
-                                <span class="rating_star"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="additional_i" href="#">
-                        <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod8.jpg" alt=""/>
-                        </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
-                        <div class="additional_rating rating">
-                            <div class="rating_wrap">
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __partial __part5"></span>
-                                <span class="rating_star"></span>
-                                <span class="rating_star"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="additional_i" href="#">
-                        <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod9.jpg" alt=""/>
-                        </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
-                        <div class="additional_rating rating">
-                            <div class="rating_wrap">
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __partial __part5"></span>
-                                <span class="rating_star"></span>
-                                <span class="rating_star"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="additional_i" href="#">
-                        <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod10.jpg" alt=""/>
-                        </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
-                        <div class="additional_rating rating">
-                            <div class="rating_wrap">
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __partial __part5"></span>
-                                <span class="rating_star"></span>
-                                <span class="rating_star"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="additional_i" href="#">
-                        <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod16.jpg" alt=""/>
-                        </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
-                        <div class="additional_rating rating">
-                            <div class="rating_wrap">
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __partial __part5"></span>
-                                <span class="rating_star"></span>
-                                <span class="rating_star"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="additional_i" href="#">
-                        <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod17.jpg" alt=""/>
-                        </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
-                        <div class="additional_rating rating">
-                            <div class="rating_wrap">
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __partial __part5"></span>
-                                <span class="rating_star"></span>
-                                <span class="rating_star"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="additional_i" href="#">
-                        <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod18.jpg" alt=""/>
-                        </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
-                        <div class="additional_rating rating">
-                            <div class="rating_wrap">
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __partial __part5"></span>
-                                <span class="rating_star"></span>
-                                <span class="rating_star"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="additional_i" href="#">
-                        <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod19.jpg" alt=""/>
-                        </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
-                        <div class="additional_rating rating">
-                            <div class="rating_wrap">
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __partial __part5"></span>
-                                <span class="rating_star"></span>
-                                <span class="rating_star"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="additional_i" href="#">
-                        <div class="additional_pic goods_pic">
-                            <img src="/img/content/prod20.jpg" alt=""/>
-                        </div>
-                        <div class="additional_name">Латексный принтер HP Latex 310</div>
-                        <div class="additional_price goods_price">$799.00</div>
-                        <div class="additional_rating rating">
-                            <div class="rating_wrap">
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __rated"></span>
-                                <span class="rating_star __partial __part5"></span>
-                                <span class="rating_star"></span>
-                                <span class="rating_star"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
+                % }
             </ul>
         </section>
 
         <!--Featured Products-->
         <section class="additional">
-            <h2 class="additional_t section-header">Рекомендуемые товары</h2>
+            <h2 class="additional_t section-header">Популярные товары</h2>
             <ul id="carousel-featured">
+		% for my $item(@$popular) {
             <li>
-                <a class="additional_i" href="#">
+                <a class="additional_i" href="/item_card/<%= $item->id %>">
                     <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod1.jpg" alt=""/>
+                        <img src="/img/content/thumbnails/<%= $item->main_img %>" alt="<%= $item->note %>"/>
                     </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
+                    <div class="additional_name"><%= $item->name %></div>
+                    <div class="additional_price goods_price"><%= $item->price %></div>
                     <div class="additional_rating rating">
                         <div class="rating_wrap">
                             <span class="rating_star __rated"></span>
@@ -388,267 +146,16 @@
                     </div>
                 </a>
             </li>
-            <li>
-                <a class="additional_i" href="#">
-                    <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod2.jpg" alt=""/>
-                    </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
-                    <div class="additional_rating rating">
-                        <div class="rating_wrap">
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __partial __part5"></span>
-                            <span class="rating_star"></span>
-                            <span class="rating_star"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="additional_i" href="#">
-                    <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod3.jpg" alt=""/>
-                    </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
-                    <div class="additional_rating rating">
-                        <div class="rating_wrap">
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __partial __part5"></span>
-                            <span class="rating_star"></span>
-                            <span class="rating_star"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="additional_i" href="#">
-                    <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod4.jpg" alt=""/>
-                    </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
-                    <div class="additional_rating rating">
-                        <div class="rating_wrap">
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __partial __part5"></span>
-                            <span class="rating_star"></span>
-                            <span class="rating_star"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="additional_i" href="#">
-                    <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod5.jpg" alt=""/>
-                    </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
-                    <div class="additional_rating rating">
-                        <div class="rating_wrap">
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __partial __part5"></span>
-                            <span class="rating_star"></span>
-                            <span class="rating_star"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="additional_i" href="#">
-                    <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod6.jpg" alt=""/>
-                    </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
-                    <div class="additional_rating rating">
-                        <div class="rating_wrap">
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __partial __part5"></span>
-                            <span class="rating_star"></span>
-                            <span class="rating_star"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="additional_i" href="#">
-                    <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod7.jpg" alt=""/>
-                    </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
-                    <div class="additional_rating rating">
-                        <div class="rating_wrap">
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __partial __part5"></span>
-                            <span class="rating_star"></span>
-                            <span class="rating_star"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="additional_i" href="#">
-                    <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod8.jpg" alt=""/>
-                    </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
-                    <div class="additional_rating rating">
-                        <div class="rating_wrap">
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __partial __part5"></span>
-                            <span class="rating_star"></span>
-                            <span class="rating_star"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="additional_i" href="#">
-                    <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod9.jpg" alt=""/>
-                    </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
-                    <div class="additional_rating rating">
-                        <div class="rating_wrap">
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __partial __part5"></span>
-                            <span class="rating_star"></span>
-                            <span class="rating_star"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="additional_i" href="#">
-                    <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod10.jpg" alt=""/>
-                    </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
-                    <div class="additional_rating rating">
-                        <div class="rating_wrap">
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __partial __part5"></span>
-                            <span class="rating_star"></span>
-                            <span class="rating_star"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="additional_i" href="#">
-                    <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod16.jpg" alt=""/>
-                    </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
-                    <div class="additional_rating rating">
-                        <div class="rating_wrap">
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __partial __part5"></span>
-                            <span class="rating_star"></span>
-                            <span class="rating_star"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="additional_i" href="#">
-                    <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod17.jpg" alt=""/>
-                    </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
-                    <div class="additional_rating rating">
-                        <div class="rating_wrap">
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __partial __part5"></span>
-                            <span class="rating_star"></span>
-                            <span class="rating_star"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="additional_i" href="#">
-                    <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod18.jpg" alt=""/>
-                    </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
-                    <div class="additional_rating rating">
-                        <div class="rating_wrap">
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __partial __part5"></span>
-                            <span class="rating_star"></span>
-                            <span class="rating_star"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="additional_i" href="#">
-                    <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod19.jpg" alt=""/>
-                    </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
-                    <div class="additional_rating rating">
-                        <div class="rating_wrap">
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __partial __part5"></span>
-                            <span class="rating_star"></span>
-                            <span class="rating_star"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="additional_i" href="#">
-                    <div class="additional_pic goods_pic">
-                        <img src="/img/content/prod20.jpg" alt=""/>
-                    </div>
-                    <div class="additional_name">Латексный принтер HP Latex 310</div>
-                    <div class="additional_price goods_price">$799.00</div>
-                    <div class="additional_rating rating">
-                        <div class="rating_wrap">
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __rated"></span>
-                            <span class="rating_star __partial __part5"></span>
-                            <span class="rating_star"></span>
-                            <span class="rating_star"></span>
-                        </div>
-                    </div>
-                </a>
-            </li>
+           %}
             </ul>
         </section>
 
         <!--BOTTOM BANNER-->
-        <div class="bottom-banner">
+        <!--<div class="bottom-banner">
             <a class="bottom-banner_lnk" href="#">
                 <img src="/img/banner/banner_bottom.jpg" width="300" height="50" alt=""/>
             </a>
-        </div>
+        </div>-->
     </div>
 
     <!--FOOTER-->

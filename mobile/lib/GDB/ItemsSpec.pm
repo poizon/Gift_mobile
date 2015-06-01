@@ -1,11 +1,11 @@
-package GDB::ItemSpec;
+package GDB::ItemsSpec;
 
 use strict;
 
 use base qw(GDB::DB::Object::AutoBase2);
 
 __PACKAGE__->meta->setup(
-    table   => 'item_specs',
+    table   => 'items_specs',
 
     columns => [
         id       => { type => 'serial', not_null => 1 },
@@ -15,6 +15,13 @@ __PACKAGE__->meta->setup(
     ],
 
     primary_key_columns => [ 'id' ],
+
+    foreign_keys => [
+        item => {
+            class       => 'GDB::Item',
+            key_columns => { item_id => 'id' },
+        },
+    ],
 );
 
 1;

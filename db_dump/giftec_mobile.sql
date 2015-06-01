@@ -26,7 +26,7 @@ CREATE TABLE `bonuses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `descript` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +37,34 @@ LOCK TABLES `bonuses` WRITE;
 /*!40000 ALTER TABLE `bonuses` DISABLE KEYS */;
 INSERT INTO `bonuses` VALUES (1,'Бесплатная доставка'),(2,'Бесплатная установка'),(3,'Бесплатное цветопрофилирование');
 /*!40000 ALTER TABLE `bonuses` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `card`
+--
+
+DROP TABLE IF EXISTS `card`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `card` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `packet_id` int(11) DEFAULT NULL,
+  `item_id` int(11) DEFAULT NULL,
+  `qty` decimal(10,0) DEFAULT NULL,
+  `status` char(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_ITM_idx` (`item_id`),
+  CONSTRAINT `FK_ITM` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `card`
+--
+
+LOCK TABLES `card` WRITE;
+/*!40000 ALTER TABLE `card` DISABLE KEYS */;
+/*!40000 ALTER TABLE `card` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -55,7 +83,7 @@ CREATE TABLE `dilers` (
   `descript` text,
   `public` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,33 +94,6 @@ LOCK TABLES `dilers` WRITE;
 /*!40000 ALTER TABLE `dilers` DISABLE KEYS */;
 INSERT INTO `dilers` VALUES (1,'«ГИФТЕК»','Москва','+7 (495) 245-02','Giftec@giftec.ru','<script src=\"//api-maps.yandex.ru/services/constructor/1.0/js/?sid=vWBdT3u79v2ItJ14aIO1UEr6UDAz-6nP&amp;width=340&amp;height=300\" type=\"text/javascript\" charset=\"utf-8\"></script><p>Адрес: 143000, г. Одинцово, ул. Железнодорожная д.3</p>','1'),(2,'«ГИФТЕК-Рефлекшн»','С.Петербург','+7 (812) 244-16','Sale@giftec.ru','123','1'),(3,'«Восток Трейд»','Новосибирск',NULL,NULL,NULL,'1'),(4,'«Восток Трейд»','Владивосток',NULL,NULL,NULL,'1'),(5,'«Восток Трейд»','Омск',NULL,NULL,NULL,'1'),(6,'«Восток Трейд»','Екатеринбург',NULL,NULL,NULL,'1'),(7,'«Восток Трейд»','Красноярск',NULL,NULL,NULL,'1'),(8,'«Восток Трейд»','Иркутск',NULL,NULL,NULL,'1'),(9,'«Восток Трейд»','Самара',NULL,NULL,NULL,'1'),(10,'«Восток Трейд»','Казань',NULL,NULL,NULL,'1');
 /*!40000 ALTER TABLE `dilers` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `item_specs`
---
-
-DROP TABLE IF EXISTS `item_specs`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `item_specs` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) DEFAULT NULL,
-  `descript` varchar(150) DEFAULT NULL,
-  `item_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `SPECS` (`item_id`,`name`,`descript`)
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `item_specs`
---
-
-LOCK TABLES `item_specs` WRITE;
-/*!40000 ALTER TABLE `item_specs` DISABLE KEYS */;
-INSERT INTO `item_specs` VALUES (1,'Модель','AZON DTS White',1),(2,'Технология печати','Струйная (микро пьезо головка)',1),(3,'Размер печати','Макс. 420 мм x 600 мм, макс. толщина 100 мм',1),(4,'Код управления','ESC/P Raster',1),(5,'Цветность','C, M, Y, K, + LC, LM, 2W',1),(6,'Скорость печати','11 отпечатков 600 мм x 420 мм в час',1),(7,'Разрешение печати','Макс. 1440 dpi',1),(8,'Требования к питанию','220В~, 59 Вт (в режиме ожидания 5 Вт)',1),(9,'Интерфейс','USB, сеть LAN',1),(10,'Условия эксплуатации','Температура от 15 до 30C, влажность от 50 до 70% отн. влажности',1),(11,'Драйвер принтера','Win 95/98/2000/XP/Vista/7, NT4.0, Mac',1),(12,'Используемый материал','Стекло, металл, камень, дерево, пластик.',1),(13,'Материал','100% полиэстер',3),(14,'Технология','double knit',3),(15,'Размер салфетки, см','23×23',3),(16,'Расфасовка в пачке, шт.','150',3),(17,'Пачек в коробке, шт.','10',3),(18,'Масса, г/м2','28-300',4),(19,'Толщина, мкм','25-450',4),(20,'Исходный рулон, ширина, мм','1650',4),(21,'Исходный рулон, диаметр, мм','1300',4),(22,'Исходный рулон, диаметр втулки, мм','76, 152',4),(23,'Вес рулона, кг','1200',4),(24,'Готовый рулон, ширина, мм','20-1600',4),(25,'Готовый рулон, диаметр, мм','до 800',4),(26,'Готовый рулон, диаметр втулки, мм','76, 152',4);
-/*!40000 ALTER TABLE `item_specs` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -116,8 +117,10 @@ CREATE TABLE `items` (
   `new_item` char(1) DEFAULT NULL,
   `main_img` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `ITEMS` (`id`,`type`,`cat`,`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+  KEY `ITEMS` (`id`,`type`,`cat`,`name`),
+  KEY `FK_CATS_idx` (`cat`),
+  CONSTRAINT `FK_CATS` FOREIGN KEY (`cat`) REFERENCES `items_cat` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -142,8 +145,11 @@ CREATE TABLE `items_bonus` (
   `bonus_id` int(11) DEFAULT NULL,
   `item_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `RELATED` (`bonus_id`,`item_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='bonus k tovary';
+  KEY `RELATED` (`bonus_id`,`item_id`),
+  KEY `FK_ITEM_idx` (`item_id`),
+  CONSTRAINT `FK_ITEM` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `FK_BONUS` FOREIGN KEY (`bonus_id`) REFERENCES `bonuses` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='bonus k tovary';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -172,7 +178,7 @@ CREATE TABLE `items_cat` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `chpurl_UNIQUE` (`chpurl`),
   KEY `SUBID` (`sub_id`,`type`,`chpurl`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -194,13 +200,14 @@ DROP TABLE IF EXISTS `items_images`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `items_images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_item` int(11) DEFAULT NULL,
+  `item_id` int(11) DEFAULT NULL,
   `main` char(1) DEFAULT NULL COMMENT 'pervaya kartinka ili net?',
   `descript` varchar(50) DEFAULT NULL,
   `image_url` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `IDITEM` (`id_item`,`image_url`,`main`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+  KEY `IDITEM` (`item_id`,`image_url`,`main`),
+  CONSTRAINT `FK_IMAGES` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -225,8 +232,9 @@ CREATE TABLE `items_related` (
   `relate_id` int(11) DEFAULT NULL,
   `item_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `RELATED` (`relate_id`,`item_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='soputsv. tovary';
+  KEY `RELATED` (`relate_id`,`item_id`),
+  CONSTRAINT `FK_RELATED` FOREIGN KEY (`relate_id`) REFERENCES `items` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='soputsv. tovary';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -235,7 +243,36 @@ CREATE TABLE `items_related` (
 
 LOCK TABLES `items_related` WRITE;
 /*!40000 ALTER TABLE `items_related` DISABLE KEYS */;
+INSERT INTO `items_related` VALUES (2,2,1),(1,3,1);
 /*!40000 ALTER TABLE `items_related` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `items_specs`
+--
+
+DROP TABLE IF EXISTS `items_specs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `items_specs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `descript` varchar(150) DEFAULT NULL,
+  `item_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `SPECS` (`item_id`,`name`,`descript`),
+  CONSTRAINT `FK_SPECS` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `items_specs`
+--
+
+LOCK TABLES `items_specs` WRITE;
+/*!40000 ALTER TABLE `items_specs` DISABLE KEYS */;
+INSERT INTO `items_specs` VALUES (11,'Драйвер принтера','Win 95/98/2000/XP/Vista/7, NT4.0, Mac',1),(9,'Интерфейс','USB, сеть LAN',1),(12,'Используемый материал','Стекло, металл, камень, дерево, пластик.',1),(4,'Код управления','ESC/P Raster',1),(1,'Модель','AZON DTS White',1),(3,'Размер печати','Макс. 420 мм x 600 мм, макс. толщина 100 мм',1),(7,'Разрешение печати','Макс. 1440 dpi',1),(6,'Скорость печати','11 отпечатков 600 мм x 420 мм в час',1),(2,'Технология печати','Струйная (микро пьезо головка)',1),(8,'Требования к питанию','220В~, 59 Вт (в режиме ожидания 5 Вт)',1),(10,'Условия эксплуатации','Температура от 15 до 30C, влажность от 50 до 70% отн. влажности',1),(5,'Цветность','C, M, Y, K, + LC, LM, 2W',1),(13,'Материал','100% полиэстер',3),(17,'Пачек в коробке, шт.','10',3),(15,'Размер салфетки, см','23×23',3),(16,'Расфасовка в пачке, шт.','150',3),(14,'Технология','double knit',3),(23,'Вес рулона, кг','1200',4),(26,'Готовый рулон, диаметр втулки, мм','76, 152',4),(25,'Готовый рулон, диаметр, мм','до 800',4),(24,'Готовый рулон, ширина, мм','20-1600',4),(22,'Исходный рулон, диаметр втулки, мм','76, 152',4),(21,'Исходный рулон, диаметр, мм','1300',4),(20,'Исходный рулон, ширина, мм','1650',4),(18,'Масса, г/м2','28-300',4),(19,'Толщина, мкм','25-450',4);
+/*!40000 ALTER TABLE `items_specs` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -253,10 +290,9 @@ CREATE TABLE `orders` (
   `tel` varchar(15) DEFAULT NULL,
   `comment` text,
   `pay` varchar(2) DEFAULT NULL COMMENT 'nl/bn',
-  `items` varchar(100) DEFAULT NULL,
-  `total` decimal(10,2) DEFAULT NULL COMMENT 'itogo summa',
+  `packet_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -282,7 +318,7 @@ CREATE TABLE `sliders` (
   `public` char(1) DEFAULT NULL,
   `descript` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -304,4 +340,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-29 17:59:20
+-- Dump completed on 2015-06-01 17:51:50

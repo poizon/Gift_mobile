@@ -1,0 +1,33 @@
+<header class="header">
+            <a class="header_logo logo" href="/">
+                <h1 class="logo_name">GIFTEC</h1>
+                <img class="logo_pic" src="/img/logo.png" alt="giftec"/>
+            </a>
+            <nav class="nav-ctrl">
+                <a class="nav-ctrl_i" id="search-btn" href="#"><i class="ico-search"></i></a>
+                % if($card_col) {
+                <a class="nav-ctrl_i __show-cart" href="/add_to_card/">
+                    <i class="ico-cart"></i>
+                    <div class="cart-size"><span class="cart-size_text"><%= $card_col %></span></div>
+                </a>
+                %} else {
+                <a class="nav-ctrl_i" href="/add_to_card/"><i class="ico-cart"></i></a>
+                %}
+                
+            </nav>
+        </header>
+
+ <!--SEARCH BAR-->
+        <div class="search is-hidden" id="search">
+            <form class="search-form" autocomplete="off">
+                <div class="search-form_field">
+                    <input id="search-text" type="search" class="search-form_text" placeholder="Что бы вы хотели найти?" value="">
+                    <button id="search-clear" type="button" class="search-form_clear"></button>
+                </div>
+                <button type="submit" class="search-form_btn btn __secondary">Поиск</button>
+            </form>
+        </div>
+
+
+
+                

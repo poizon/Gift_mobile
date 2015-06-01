@@ -9,13 +9,20 @@ __PACKAGE__->meta->setup(
 
     columns => [
         id        => { type => 'serial', not_null => 1 },
-        id_item   => { type => 'integer' },
+        item_id   => { type => 'integer' },
         main      => { type => 'character', length => 1 },
         descript  => { type => 'varchar', length => 50 },
         image_url => { type => 'varchar', length => 50 },
     ],
 
     primary_key_columns => [ 'id' ],
+
+    foreign_keys => [
+        item => {
+            class       => 'GDB::Item',
+            key_columns => { item_id => 'id' },
+        },
+    ],
 );
 
 1;

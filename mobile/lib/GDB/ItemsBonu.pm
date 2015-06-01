@@ -14,15 +14,18 @@ __PACKAGE__->meta->setup(
     ],
 
     primary_key_columns => [ 'id' ],
-    
-    relationships => [
-        bid => {
-            class      => 'GDB::Bonus',
-            column_map => { bonus_id => 'id' },
-            type       => 'one to one',
+
+    foreign_keys => [
+        bonus => {
+            class       => 'GDB::Bonus',
+            key_columns => { bonus_id => 'id' },
         },
-    ]
-        
+
+        item => {
+            class       => 'GDB::Item',
+            key_columns => { item_id => 'id' },
+        },
+    ],
 );
 
 1;

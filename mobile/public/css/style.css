@@ -490,6 +490,10 @@ $ico-2x-sprite-dimensions: true;
   margin: 20px 0;
 }
 
+.is-hidden {
+  display: none !important;
+}
+
 /*==========================================LAYOUT===============================================*/
 .main {
   min-height: 100%;

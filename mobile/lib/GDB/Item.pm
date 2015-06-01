@@ -1,7 +1,7 @@
 package GDB::Item;
 
 use strict;
-use lib qw(..);
+
 use base qw(GDB::DB::Object::AutoBase2);
 
 __PACKAGE__->meta->setup(
@@ -23,15 +23,46 @@ __PACKAGE__->meta->setup(
     ],
 
     primary_key_columns => [ 'id' ],
-    
-    relationships => [
-        cat_url => {
-            class      => 'GDB::ItemsCat',
-            column_map => { cat => 'id' },
-            type       => 'one to one',
-        },
-    ]
 
+    foreign_keys => [
+        items_cat => {
+            class       => 'GDB::ItemsCat',
+            key_columns => { cat => 'id' },
+        },
+    ],
+
+    relationships => [
+        bonus_objs => {
+            map_class => 'GDB::ItemsBonu',
+            map_from  => 'item',
+            map_to    => 'bonus',
+            type      => 'many to many',
+        },
+
+        card => {
+            class      => 'GDB::Card',
+            column_map => { id => 'item_id' },
+            type       => 'one to many',
+        },
+
+        items_images => {
+            class      => 'GDB::ItemsImage',
+            column_map => { id => 'item_id' },
+            type       => 'one to many',
+        },
+
+        items_related => {
+            class      => 'GDB::ItemsRelated',
+            column_map => { id => 'relate_id' },
+            type       => 'one to many',
+        },
+
+        items_specs => {
+            class      => 'GDB::ItemsSpec',
+            column_map => { id => 'item_id' },
+            type       => 'one to many',
+        },
+    ],
 );
 
 1;

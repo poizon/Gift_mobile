@@ -41,5 +41,28 @@ $(function(){
         if (isNaN($(this).val())){
             $(this).val('1');
         }
-    })
+    });
+
+    //Появление и скрытие строки поиска
+    $('#search-btn').click(function(e) {
+        var $message = $('#search');
+        var self = $(this);
+
+        if ($message.hasClass('is-hidden')) {
+            $message.removeClass('is-hidden');
+            self.addClass('is-hidden');
+
+            var firstClick = true;
+            $(document).bind('click.myEvent', function(e) {
+                if (!firstClick && $(e.target).closest('#search').length == 0) {
+                    $message.addClass('is-hidden');
+                    self.removeClass('is-hidden');
+                    $(document).unbind('click.myEvent');
+                }
+                firstClick = false;
+            });
+        }
+
+        e.preventDefault();
+    });
 });
