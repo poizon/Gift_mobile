@@ -173,25 +173,48 @@ sub add_to_card {
   $item_id =~ s/[^0-9]+//g;
   # восстанавливаем № сессии (номер пакета)
   my $packet_id = $self->session('packet_id');
-  unless($packet_id) {
-  $packet_id = GDB::Card::Manager->get_card_count(query => [packet_id => {gt => 1 }], debug => 1);
+  my $qty = 0;
+  # если пакет есть - проверяем нет ли дубликатов товара в нем
+  if ($packet_id) {
+  
+  # если пакета нет - генерим новый  
+  } else {
+  $packet_id = GDB::Card::Manager->get_card_count(query => [packet_id => {ge => 1 }]);
   $packet_id+=1;
   }                                                     
-   # получаем все товары по этому пакету
-  my $items = GDB::Card::get_card(query => [packet_id => $packet_id, status => 'O']);# с закрытым статусом не учитываем
-
-  if ($items->total) {# если есть данные по пакету -
-    # проверяем есть ли такой товар в заказе - и если есть - увеличиваем кол-во на 1 шт.
-    
+   # проверяем есть ли в пакете такой же товар
+  my $items_count = GDB::Card::Manager::get_card_iterator(query => [packet_id => $packet_id, status => 'O', item_id => $item_id]);
+  print $items_count->total,"\n";
+  
+  while (my $line = $items_count->next) {
+    my $qty = $line->qty+1;
+    $line->qty($qty);
+    $line->save;
+  }
+  
+  
+  #if ($items_count->total) {# если есть данные по пакету -
+  #  # проверяем есть ли такой товар в заказе - и если есть - увеличиваем кол-во на 1 шт.
+  #  my $item = GDB::Card->new(item_id => $item_id);
+  #  # если можем загрузить
+  #  if ($item->load(speculative => 1)) {
+  #  $qty = $item->qty;
+  #  $item->qty($qty+1);
+  #  $item->save;
+  #  } else {
+  #    $self->redirect_to('/not_found');
+  #  }
     # если нет - инсертим новую позицию
-  } else {
+  #} else {
+  unless($items_count->total) {
     # если нет пакета - добавляем строку и прописываем кол-во в сессию
     my $new_line = GDB::Card->new(packet_id => $packet_id, item_id => $item_id, qty => 1, status => 'O');
     $new_line->save;
     $self->session(packet_id => $packet_id);# сохраняем в сессию  номер пакета
     $self->session(card_col => 1); 
   }
-  
+  # запрашиваем товары в карточе для отображения
+  my $items = GDB::Card::Manager::get_card(query => [packet_id => $packet_id, status => 'O']);
   my $card_col = $self->session('card_col') || 0; # считаем кол-во
   $self->stash(
                card_col => $card_col,
@@ -209,10 +232,5 @@ sub not_found {
 }
 
 
-### SUBS ITERNAL ####
-#sub _generate_packet_id {
-#  my $current_id = GDB::Card::Manager->get_card_max();
-#    return $current_id ? 1 : $current_id + 1;
-#}
 
 1;

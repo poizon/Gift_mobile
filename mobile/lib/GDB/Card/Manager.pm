@@ -3,7 +3,7 @@ package GDB::Card::Manager;
 use strict;
 #use Data::Dumper;
 use base qw(Rose::DB::Object::Manager);
-
+use lib qw(../..);
 use GDB::Card;
 
 sub object_class { 'GDB::Card' }
