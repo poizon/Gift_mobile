@@ -22,6 +22,7 @@ sub startup {
   #$self->plugin('ITS_mojo::Helpers');
   $self->secrets([$cfg->{secret}]);
   $self->sessions->default_expiration($cfg->{session_exp});
+  $self->sessions->cookie_name('gifmobile');
   # DB connect
   my $dbh = GDB::DB::Object::AutoBase2->init_db;
   # Router
@@ -36,7 +37,7 @@ sub startup {
   $r->get('/not_found')->to('index#not_found');
   $r->get('/shop/:name')->to('index#shop');
   $r->get('/item_card/:id')->to('index#item_card');
-  $r->get('/add_to_card/:id' => {id => 0})->to('index#add_to_card');
+  $r->post('/add_to_card/:id' => {id => 0})->to('index#add_to_card');
   
 }
 

@@ -93,7 +93,7 @@
 
         <!--ADD TO CART-->
         <div class="card-add container">
-            <a href="/add_to_card/<%= $item->id %>"><button type="button" class="btn __primary">Добавить в корзину</button></a>
+            <button type="button" class="btn __primary" id="post_btn">Добавить в корзину</button>
             <div class="status-mesages">
                 % for my $b(@$bonus) {
                 <span class="status-message __free-shipping"><%= $b->bonus->descript %></span>
@@ -225,12 +225,19 @@
             });
         });
     </script>
-<!--    <script>
-      $('#add_card').click(function () {
-      //$(this).slideUp();
-      
-    });
-    </script>-->
+    <script>
+$('#post_btn').click(function() {
+    $.post('http://127.0.0.1:3000/add_to_card', {"id": '<%= $item->id %>'},
+        function(data){
+            if (data.success) {
+                $('#result').html(data.success.msg);
+            } else {
+                $('#result').html(data.error.msg);
+            }
+        }, "json");
+    return false;
+});
+    </script>
     <script src="/js/main.js"></script>
 </body>
 </html>

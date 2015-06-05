@@ -42,6 +42,7 @@ sub contacts {
   }
   
 }
+
 # товары категории
 sub items_by_cat {
   my $self = shift;
@@ -174,51 +175,42 @@ sub add_to_card {
   # восстанавливаем № сессии (номер пакета)
   my $packet_id = $self->session('packet_id');
   my $qty = 0;
+  my $add_flag = 0;
+  my $card_col = $self->session('card_col') || 0; # считаем кол-во
+  #print $card_col," 1 - \n";
   # если пакет есть - проверяем нет ли дубликатов товара в нем
-  if ($packet_id) {
-  
-  # если пакета нет - генерим новый  
-  } else {
-  $packet_id = GDB::Card::Manager->get_card_count(query => [packet_id => {ge => 1 }]);
-  $packet_id+=1;
-  }                                                     
-   # проверяем есть ли в пакете такой же товар
+  if ($packet_id and $item_id) {
   my $items_count = GDB::Card::Manager::get_card_iterator(query => [packet_id => $packet_id, status => 'O', item_id => $item_id]);
-  print $items_count->total,"\n";
-  
+  # для всех позиций
   while (my $line = $items_count->next) {
     my $qty = $line->qty+1;
     $line->qty($qty);
     $line->save;
+    $card_col++;
+    $add_flag = 1;
+    #print $card_col," 2 - \n";
+    } 
+  # если пакета нет - генерим новый  
+  } elsif($item_id) {
+  $packet_id = GDB::Card::Manager->get_card_count(query => [packet_id => {ge => 1 }]);
+  $packet_id+=1;
   }
   
-  
-  #if ($items_count->total) {# если есть данные по пакету -
-  #  # проверяем есть ли такой товар в заказе - и если есть - увеличиваем кол-во на 1 шт.
-  #  my $item = GDB::Card->new(item_id => $item_id);
-  #  # если можем загрузить
-  #  if ($item->load(speculative => 1)) {
-  #  $qty = $item->qty;
-  #  $item->qty($qty+1);
-  #  $item->save;
-  #  } else {
-  #    $self->redirect_to('/not_found');
-  #  }
-    # если нет - инсертим новую позицию
-  #} else {
-  unless($items_count->total) {
-    # если нет пакета - добавляем строку и прописываем кол-во в сессию
-    my $new_line = GDB::Card->new(packet_id => $packet_id, item_id => $item_id, qty => 1, status => 'O');
+  # новая запись в пакет только если это не добавление уже существующей позиции
+  unless($add_flag) {
+  my $new_line = GDB::Card->new(packet_id => $packet_id, item_id => $item_id, qty => 1, status => 'O');
     $new_line->save;
     $self->session(packet_id => $packet_id);# сохраняем в сессию  номер пакета
-    $self->session(card_col => 1); 
+    $card_col++ if $item_id;
+    #print $card_col," 3 - \n";
   }
   # запрашиваем товары в карточе для отображения
   my $items = GDB::Card::Manager::get_card(query => [packet_id => $packet_id, status => 'O']);
-  my $card_col = $self->session('card_col') || 0; # считаем кол-во
+  
+  $self->session('card_col' => $card_col) if $item_id;
   $self->stash(
                card_col => $card_col,
-               item     => $items
+               items     => $items
                );
   $self->render('card');
 }

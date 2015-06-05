@@ -48,30 +48,31 @@
             </div>
 
             <!--ITEMS COUNT-->
-            <h2 class="cart-count">Товаров в корзине (2)</h2>
+            <h2 class="cart-count">Товаров в корзине (<%= $card_col %>)</h2>
 
             <!--CART ITEMS-->
+            % for my $i(@$items) {
             <div class="cart-item">
                 <div class="cart-item_cnt">
                     <div class="cart-item_h">
                         <div class="cart-item_h_pic">
-                            <img src="/img/content/prod1.jpg" alt=""/>
+                            <img src="/img/content/<%= $i->item->main_img %>" alt="<%= $i->item->note %>"/>
                         </div>
                         <div class="cart-item_h_details">
-                            <a href="#" class="cart-item_h_name">AZON DTS</a>
+                            <a href="#" class="cart-item_h_name"><%= $i->item->name %></a>
                             <ul class="cart-item_h_list">
-                                <li class="variant">Size: 4/5</li>
-                                <li class="variant">Color: AQUA WAVE</li>
+                                <!--<li class="variant">Size: 4/5</li>-->
+                                <li class="variant"><%= $i->item->note %></li>
                             </ul>
                         </div>
                     </div>
                     <div class="cart-item_quantity-cnt">
                         <div class="cart-form_field">
                             <label class="cart-form_label" for="prod1">Количество</label>
-                            <input class="cart-form_input" type="text" name="prod1" id="prod1" value="1" data-num="number"/>
+                            <input class="cart-form_input" type="text" name="prod1" id="prod1" value="<%= $i->qty %>" data-num="number"/>
                         </div>
                         <div class="cart-item_price">
-                            <span class="goods_price">500 000 руб.</span>
+                            <span class="goods_price"><%= $i->item->price %> руб.</span>
                         </div>
                     </div>
                 </div>
@@ -80,37 +81,7 @@
                     <button class="cart-item_actions_btn" type="button">Удалить</button>
                 </div>
             </div>
-
-            <div class="cart-item">
-                <div class="cart-item_cnt">
-                    <div class="cart-item_h">
-                        <div class="cart-item_h_pic">
-                            <img src="/img/content/prod16.jpg" alt=""/>
-                        </div>
-                        <div class="cart-item_h_details">
-                            <a href="#" class="cart-item_h_name">AZON Tex Pro</a>
-                            <ul class="cart-item_h_list">
-                                <li class="variant">Size: 4/5</li>
-                                <li class="variant">Color: AQUA WAVE</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="cart-item_quantity-cnt">
-                        <div class="cart-form_field">
-                            <label class="cart-form_label" for="prod2">Количество</label>
-                            <input class="cart-form_input" type="text" name="prod2" id="prod2" value="1" data-num="number"/>
-                        </div>
-                        <div class="cart-item_price">
-                            <span class="goods_price">400 000 руб.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-item_actions">
-                    <button class="cart-item_actions_btn __right" type="button">Сохранить изменения</button>
-                    <button class="cart-item_actions_btn" type="button">Удалить</button>
-                </div>
-            </div>
-
+        %}  
             <!--CART SAVE-->
             <div class="cart-save">
                 <a class="btn __secondary" href="#">Продолжить покупки</a>
