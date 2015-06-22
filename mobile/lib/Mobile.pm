@@ -37,7 +37,7 @@ sub startup {
   $r->get('/not_found')->to('index#not_found');
   $r->get('/shop/:name')->to('index#shop');
   $r->get('/item_card/:id')->to('index#item_card');
-  $r->any('/add_to_card/:id' => {id => 0})->to('index#add_to_card');
+  $r->get('/add_to_card/:id' => {id => 0})->to('index#add_to_card');
   
 }
 

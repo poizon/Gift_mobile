@@ -59,7 +59,7 @@
                             <img src="/img/content/<%= $i->item->main_img %>" alt="<%= $i->item->note %>"/>
                         </div>
                         <div class="cart-item_h_details">
-                            <a href="#" class="cart-item_h_name"><%= $i->item->name %></a>
+                            <a href="/item_card/<%= $i->item->id %>" class="cart-item_h_name"><%= $i->item->name %></a>
                             <ul class="cart-item_h_list">
                                 <!--<li class="variant">Size: 4/5</li>-->
                                 <li class="variant"><%= $i->item->note %></li>
@@ -84,8 +84,8 @@
         %}  
             <!--CART SAVE-->
             <div class="cart-save">
-                <a class="btn __secondary" href="#">Продолжить покупки</a>
-                <a class="btn __simple" href="#">Зарегистрироваться</a>
+                <a class="btn __secondary" href="/items_by_cat">Продолжить покупки</a>
+                <a class="btn __simple" href="#">Оформить заказ</a>
             </div>
         </form>
     </div>
