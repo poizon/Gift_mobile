@@ -227,14 +227,17 @@
     </script>
     <script>
 $('#post_btn').click(function() {
-    $.post('http://127.0.0.1:3000/add_to_card', {"id": '<%= $item->id %>'},
-        function(data){
-            if (data.success) {
-                $('#result').html(data.success.msg);
-            } else {
-                $('#result').html(data.error.msg);
-            }
-        }, "json");
+    $.post('http://127.0.0.1:3000/add_to_card/<%= $item->id %>'
+   /*     function(data){
+            setTimeout('window.location.reload()', 2);
+            //if (data.success) {
+            //    $('#result').html(data.success.msg);
+            //    setTimeout('window.location.reload()', 2000);
+            //} else {
+            //    $('#result').html(data.error.msg);
+            //}
+        }*/
+   );
     return false;
 });
     </script>
