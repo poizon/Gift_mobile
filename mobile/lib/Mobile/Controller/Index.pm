@@ -174,39 +174,27 @@ sub add_to_card {
   $item_id =~ s/[^0-9]+//g;
   # восстанавливаем № сессии (номер пакета)
   my $packet_id = $self->session('packet_id');
-  my $qty = 0;
-  my $add_flag = 0;
-  my $card_col = $self->session('card_col') || 0; # считаем кол-во
   #print $card_col," 1 - \n";
-  # если пакет есть - проверяем нет ли дубликатов товара в нем
-  if ($packet_id and $item_id) {
-  my $items_count = GDB::Card::Manager::get_card_iterator(query => [packet_id => $packet_id, status => 'O', item_id => $item_id]);
-  # для всех позиций
-  while (my $line = $items_count->next) {
-    my $qty = $line->qty+1;
-    $line->qty($qty);
-    $line->save;
-    $card_col++;
-    $add_flag = 1;
-    #print $card_col," 2 - \n";
-    } 
+  # если пакет есть
+  if ($packet_id) {
+    # инсертим позицию
+  my $new_line = GDB::Card->new(packet_id => $packet_id, item_id => $item_id, qty => 1, status => 'O');
+    $new_line->save;
+    $self->session(packet_id => $packet_id);
   # если пакета нет - генерим новый  
   } elsif($item_id) {
   $packet_id = GDB::Card::Manager->get_card_count(query => [packet_id => {ge => 1 }]);
   $packet_id+=1;
   }
-  
-  # новая запись в пакет только если это не добавление уже существующей позиции
-  unless($add_flag) {
-  my $new_line = GDB::Card->new(packet_id => $packet_id, item_id => $item_id, qty => 1, status => 'O');
-    $new_line->save;
-    $self->session(packet_id => $packet_id);# сохраняем в сессию  номер пакета
-    $card_col++ if $item_id;
-    #print $card_col," 3 - \n";
-  }
+
   # запрашиваем товары в карточе для отображения
-  my $items = GDB::Card::Manager::get_card(query => [packet_id => $packet_id, status => 'O']);
-  
+  my $items = GDB::Card::Manager->get_objects_from_sql(
+                                                args => [ $packet_id ],
+                                                sql  => 'SELECT id, packet_id, item_id, SUM(qty) qty, status FROM card WHERE  packet_id = ? AND  status = \'O\'
+                                                GROUP BY packet_id,item_id,status'
+                                                );
+  # подсчитываем запросом кол-во всех товаров в корзине по пакету
+  my $card_col = GDB::Card::Manager->get_card_count(query => [packet_id => $packet_id]);
   $self->session('card_col' => $card_col) if $item_id;
   $self->stash(
                card_col => $card_col,
