@@ -273,6 +273,25 @@ sub order_save {
   $self->render('thanks');
 }
 
+sub search {
+  my $self = shift;
+  my $seek = $self->param('seek');
+  $seek = quotemeta($seek);
+  my $card_col = $self->session('card_col');
+  #
+  my $items = GDB::Item::Manager->get_items(query => [or => [ name => { like => "%$seek%"}, descript => {like => "%$seek%"}]]);
+  my $spec = GDB::ItemsSpec::Manager->get_items_specs(query => [or => [ name => { like => "%$seek%"}, descript => {like => "%$seek%"}]]);
+  my $cont = GDB::Diler::Manager->get_dilers(query => [or => [ name => { like => "%$seek%"}, city => {like => "%$seek%"}], public => 1]);
+  #
+  $self->stash(
+                card_col => $card_col,
+                items    => $items,
+                spec    => $spec,
+                cont   => $cont,
+                );
+  $self->render('search');
+}
+
 sub not_found {
   my $self = shift;
   #$self->session(card_col => 0);

@@ -41,6 +41,7 @@ sub startup {
   $r->get('/del_item/:id')->to('index#del_item');
   $r->get('/order')->to('index#order');
   $r->post('/order_save')->to('index#order_save');
+  $r->post('/search')->to('index#search');
   
 }
 

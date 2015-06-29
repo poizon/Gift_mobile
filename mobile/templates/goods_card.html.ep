@@ -115,6 +115,7 @@
                 <%== $item->descript %>
                 <br>
                 <!--FEATURES-->
+                % if(@$spec->[0]->id) { 
                 <div class="features">
                     <h3 class="features_t">Технические характеристики</h3>
                     <table class="features_table">
@@ -128,6 +129,7 @@
                         </tbody>
                     </table>
                 </div>
+                %}
             </div>
         </div>
 

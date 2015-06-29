@@ -11,3 +11,11 @@
             <a class="links_i desktop-site" href="http://www.giftec.ru/?nomobile">Основной сайт</a>
         </div>
     </footer>
+    
+    <a href="#top" id="toTop"></a>
+<!--scripts-->
+    <script>
+        $(function() {
+            $("#toTop").scrollToTop({offset: 500});
+        });
+    </script>

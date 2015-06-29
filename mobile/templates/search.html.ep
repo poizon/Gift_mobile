@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <title>Поиск</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/touch-icon-iphone4.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+    <div class="main">
+        <!--HEADER-->
+ %= include 'header';
+
+        <!--BREADCRUMBS-->
+        <nav class="breadcrumbs">
+            <div class="breadcrumbs_w">
+                <span class="breadcrumbs_i">
+                    <a class="breadcrumbs_lnk" href="/">Главная</a>
+                </span>
+                <span class="breadcrumbs_i">
+                    <a class="breadcrumbs_lnk __active" href="javascript:void(0);">Результаты поиска</a>
+                </span>
+            </div>
+        </nav>
+
+        <!--GOOGS LIST-->
+        <ul class="goods">
+            % for my $i(@$items) {
+            <li class="goods_i flags">
+                <a class="goods_lnk" href="/item_card/<%= $i->id %>">
+                    <div class="goods_col">
+                        <div class="goods_name"><%= $i->name %></div>
+                        <div class="goods_note"><%= $i->note %></div>
+                    </div>
+                </a>
+            </li>
+            %}
+        </ul>
+        
+        <ul class="goods">
+            % for my $i(@$spec) {
+            <li class="goods_i flags">
+                <a class="goods_lnk" href="/item_card/<%= $i->item_id %>">
+                    <div class="goods_col">
+                        <div class="goods_name"><%= $i->name %></div>
+                        <div class="goods_note"><%= $i->descript %></div>
+                    </div>
+                </a>
+            </li>
+            %}
+        </ul>
+        
+        <ul class="goods">
+            % for my $i(@$cont) {
+            <li class="goods_i flags">
+                <a class="goods_lnk" href="/contacts/<%= $i->id %>">
+                    <div class="goods_col">
+                        <div class="goods_name"><%= $i->name %></div>
+                        <div class="goods_note"><%= $i->city %></div>
+                    </div>
+                </a>
+            </li>
+            %}
+        </ul>
+    </div>
+
+    <!--FOOTER-->
+%= include 'footer'
+    <!--JAVA SCRIPT-->
+    <!--libraries-->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <!--plugins-->
+    <script src="/js/jquery.scrollToTop.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
