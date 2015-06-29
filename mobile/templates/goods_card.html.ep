@@ -47,7 +47,7 @@
             <!--goods HEAD INFO-->
             <div class="card-head_info">
                 <h2 class="page-header"><%= $item->name %></h2>
-                <div class="goods_price"><%= $item->price %> руб</div>
+                <div class="goods_price"><%= $item->price %> руб.</div>
                 % if ($item->old_price>0) {
                 <div class="goods_old-price">Старая цена: <span class="goods_comp-price"><%= $item->old_price %> руб.</span></div>
                 %}
@@ -142,7 +142,7 @@
                         <img src="/img/content/thumbnails/<%= $re->relate->main_img %>" alt="<%= $re->relate->note %>"/>
                         </div>
                         <div class="additional_name"><%= $re->relate->name %></div>
-                        <div class="additional_price goods_price"><%= $re->relate->price %></div>
+                        <div class="additional_price goods_price"><%= $re->relate->price %>  руб.</div>
                     </a>
                 </li>
                 % }

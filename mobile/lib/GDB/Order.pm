@@ -16,6 +16,7 @@ __PACKAGE__->meta->setup(
         comment   => { type => 'text', length => 65535 },
         pay       => { type => 'varchar', length => 2 },
         packet_id => { type => 'integer' },
+        status    => { type => 'character', length => 1 },
     ],
 
     primary_key_columns => [ 'id' ],

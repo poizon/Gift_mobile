@@ -38,6 +38,9 @@ sub startup {
   $r->get('/shop/:name')->to('index#shop');
   $r->get('/item_card/:id')->to('index#item_card');
   $r->get('/add_to_card/:id' => {id => 0})->to('index#add_to_card');
+  $r->get('/del_item/:id')->to('index#del_item');
+  $r->get('/order')->to('index#order');
+  $r->post('/order_save')->to('index#order_save');
   
 }
 

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <title>Оформление заказа</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/touch-icon-iphone4.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+    <div class="main">
+        <!--HEADER-->
+%= include 'header' 
+        <div class="thanks">
+            Спасибо за заказ! <br/> Мы свяжемся с Вами в самое ближайшее время.
+        </div>
+
+    </div>
+
+	<!--FOOTER-->
+%= include 'footer'
+
+    <!--JAVA SCRIPT-->
+    <!--libraries-->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <!--plugins-->
+    <script src="/js/jquery.validation.min.js"></script>
+    <!--scripts-->
+    <script>
+        $(function(){
+            $('#order-form').validate({
+                submit: {
+                    settings: {
+                        form: null,
+                        display: "inline",
+                        insertion: "append",
+                        allErrors: false,
+                        trigger: "click",
+                        button: "input[type='submit']",
+                        errorClass: "form_error",
+                        errorListClass: "form_error-list",
+                        inputContainer: '.form_field',
+                        clear: "focusin",
+                        scrollToError: false
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

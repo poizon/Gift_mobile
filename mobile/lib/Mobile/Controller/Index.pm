@@ -174,19 +174,20 @@ sub add_to_card {
   $item_id =~ s/[^0-9]+//g;
   # восстанавливаем № сессии (номер пакета)
   my $packet_id = $self->session('packet_id');
-  #print $card_col," 1 - \n";
-  # если пакет есть
-  if ($packet_id) {
-    # инсертим позицию
-  my $new_line = GDB::Card->new(packet_id => $packet_id, item_id => $item_id, qty => 1, status => 'O');
-    $new_line->save;
-    $self->session(packet_id => $packet_id);
-  # если пакета нет - генерим новый  
-  } elsif($item_id) {
+  # если нет пакета - генерим новый и пишем в сессию
+  unless($packet_id) {
   $packet_id = GDB::Card::Manager->get_card_count(query => [packet_id => {ge => 1 }]);
   $packet_id+=1;
+  $self->session(packet_id => $packet_id);  
   }
-
+  
+  # если пришол id товара, то записивыем в БД
+  if ($item_id) {
+    # инсертим позицию
+   my $new_line = GDB::Card->new(packet_id => $packet_id, item_id => $item_id, qty => 1, status => 'O');
+    $new_line->save;
+  }
+  
   # запрашиваем товары в карточе для отображения
   my $items = GDB::Card::Manager->get_objects_from_sql(
                                                 args => [ $packet_id ],
@@ -195,12 +196,81 @@ sub add_to_card {
                                                 );
   # подсчитываем запросом кол-во всех товаров в корзине по пакету
   my $card_col = GDB::Card::Manager->get_card_count(query => [packet_id => $packet_id]);
+  # для подсчета итого
+  my $item_total = GDB::Card::Manager->get_card(query => [packet_id => $packet_id]);
+  my $total = 0;
+  foreach my $i(@$item_total) {
+    $total+=$i->item->price;
+  }
+  ##
   $self->session('card_col' => $card_col) if $item_id;
   $self->stash(
                card_col => $card_col,
-               items     => $items
+               items     => $items,
+               card_total => $total,
                );
   $self->render('card');
+}
+
+sub del_item {
+  my $self = shift;
+  my $id = $self->param('id');
+  $id =~ s/[^0-9]+//g;
+  my $card_col = $self->session('card_col');
+  # восстанавливаем № сессии (номер пакета)
+  my $packet_id = $self->session('packet_id');
+  $self->redirect_to('/add_to_card/') unless $packet_id;
+  my $card_line = GDB::Card->new(id => $id);
+  $self->redirect_to('/add_to_card') unless ($card_line->load(speculative => 1));
+  $card_line->delete;
+  # уменьшаем кол-во на 1 в сессии
+  $card_col--;
+  $self->session('card_col' => $card_col);  
+  $self->redirect_to('/add_to_card/'); 
+}
+
+sub order {
+  my $self = shift;
+  my $packet_id = $self->session('packet_id');
+  my $card_col = $self->session('card_col');
+  # запрашиваем товары в карточе для отображения
+  my $items = GDB::Card::Manager->get_objects_from_sql(
+                                                args => [ $packet_id ],
+                                                sql  => 'SELECT id, packet_id, item_id, SUM(qty) qty, status FROM card WHERE  packet_id = ? AND  status = \'O\'
+                                                GROUP BY packet_id,item_id,status'
+                                                );
+  # для подсчета итого
+  my $item_total = GDB::Card::Manager->get_card(query => [packet_id => $packet_id]);
+  my $total = 0;
+  foreach my $i(@$item_total) {
+    $total+=$i->item->price;
+  }
+  ##
+    $self->stash(
+               items     => $items,
+               card_col => $card_col,
+               card_total => $total,
+               );
+  $self->render('order');
+}
+
+sub order_save {
+  my $self = shift;
+  my $packet_id = $self->session('packet_id');
+  my $name = $self->param('name');
+  my $surname = $self->param('surname');
+  my $email = $self->param('email');
+  my $tel = $self->param('tel');
+  my $comment = $self->param('comment');
+  my $pay = $self->param('pay');
+  
+  my $ord = GDB::Order->new(name => $name, surname => $surname, email => $email, tel => $tel, comment => $comment, pay => $pay, packet_id => $packet_id, status => 'O');
+  $ord->save;
+  $self->session(expires => 1);
+  $self->stash(
+               card_col => 0,
+              );
+  $self->render('thanks');
 }
 
 sub not_found {

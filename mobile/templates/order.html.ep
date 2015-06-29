@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <title>Оформление заказа</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/touch-icon-iphone4.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+    <div class="main">
+        <!--HEADER-->
+%= include 'header'    
+
+        <!--BREADCRUMBS-->
+        <nav class="breadcrumbs">
+            <div class="breadcrumbs_w">
+                <span class="breadcrumbs_i">
+                    <a class="breadcrumbs_lnk __active" href="javascript:void(0);">оформление заказа</a>
+                </span>
+            </div>
+        </nav>
+
+        <!--ORDER FORM-->
+        <form id="order-form" class="order-form form container" action="/order_save" method="post">
+            <h2 class="section-header">Оформление заказа</h2>
+            <div class="form_field">
+                <input class="form_input" type="text" name="name" id="name" placeholder="Имя*"
+                       data-validation="NOTEMPTY"
+                       data-validation-message="Обязательное поле"/>
+            </div>
+            <div class="form_field">
+                <input class="form_input" type="text" name="surname" id="surname" placeholder="Фамилия*"
+                       data-validation="NOTEMPTY"
+                       data-validation-message="Обязательное поле"/>
+            </div>
+            <div class="form_field">
+                <input class="form_input" type="text" name="email" id="email" placeholder="Email-адрес*"
+                       data-validation="NOTEMPTY"
+                       data-validation-message="Обязательное поле"
+                       data-validation-regex="/^([^@]+?)@(([a-z0-9]-*)*[a-z0-9]+\.)+([a-z0-9]+)$/i"
+                       data-validation-regex-message="Не корректный Email"/>
+            </div>
+            <div class="form_field">
+                <input class="form_input" type="text" name="tel" id="tel" placeholder="Телефон*"
+                       data-validation="NOTEMPTY"
+                       data-validation-message="Обязательное поле"
+                       data-validation-regex="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/i"
+                       data-validation-regex-message="Не корректный телефон"/>
+            </div>
+            <div class="form_field">
+                <textarea name="comment" id="comment" rows="5" placeholder="Примечания"></textarea>
+            </div>
+
+            <!--ORDER INFORMATIOM-->
+            <h2 class="section-header">Ваш заказ</h2>
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>Товар</th>
+                        <th>Всего</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    % for my $i(@$items) {
+                    <tr>
+                        <td><%= $i->item->name %> (<%= $i->qty %>)</td>
+                        <td><%= $i->item->price*$i->qty %> руб.</td>
+                    </tr>
+                    %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Заказ на сумму</th>
+                        <th><%= $card_total %> руб.</th>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <!--PAYMENT SYSTEM-->
+            <h2 class="section-header">Выбор способа оплаты</h2>
+            <div class="form_field radio">
+                <div class="radio_field">
+                    <input class="radio_input" type="radio" name="pay" checked id="pay1" value="bn"/>
+                    <label for="pay1">Оплата по безналичному расчету через банк, счёт выслать на E-mail</label>
+                </div>
+                <div class="radio_field">
+                    <input class="radio_input" type="radio" name="pay" id="pay2" value="nl"/>
+                    <label for="pay2">Наличными по факту получения</label>
+                </div>
+            </div>
+
+            <input class="order-form_submit btn __primary" type="submit" value="заказать"/>
+        </form>
+    </div>
+
+    <!--FOOTER-->
+%= include 'footer'
+
+    <!--JAVA SCRIPT-->
+    <!--libraries-->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <!--plugins-->
+    <script src="/js/jquery.validation.min.js"></script>
+    <!--scripts-->
+    <script>
+        $(function(){
+            $('#order-form').validate({
+                submit: {
+                    settings: {
+                        form: null,
+                        display: "inline",
+                        insertion: "append",
+                        allErrors: false,
+                        trigger: "click",
+                        button: "input[type='submit']",
+                        errorClass: "form_error",
+                        errorListClass: "form_error-list",
+                        inputContainer: '.form_field',
+                        clear: "focusin",
+                        scrollToError: false
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

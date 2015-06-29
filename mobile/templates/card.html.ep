@@ -27,24 +27,24 @@
         </nav>
 
         <!--SECURE-->
-        <div class="cart-secure">Проверка безопасности</div>
+       <!-- <div class="cart-secure">Проверка безопасности</div>-->
 
         <form class="cart-form container" action="#">
             <!--THRESHOLD SHIPPING HEADER-->
-            <div class="cart-shipping-h">
+           <!-- <div class="cart-shipping-h">
                 Добавить <strong>15 000 руб.</strong> за <strong>установку и настройку</strong>  и  получите <strong>бесплатную доставку</strong>.
-            </div>
+            </div>-->
 
             <!--SUBTOTAL-->
             <div class="cart-total-h">
                 <h2 class="cart-total-h_t">Итого</h2>
-                <em class="goods_price">915 000 руб.</em>
+                <em class="goods_price"><%= $card_total %> руб.</em>
             </div>
 
             <!--CHECK OUT-->
             <div class="cart-checkout">
                 <button class="btn __primary" type="button">Проверка заказа</button>
-                <p class="cart-checkout_note">Итог не включает соответствующие расходы на доставку, налог с продаж или необязательно подарочная упаковка</p>
+                <p class="cart-checkout_note">Итог не включает соответствующие расходы на доставку. Количество товара можно будет уточнить у менеджера</p>
             </div>
 
             <!--ITEMS COUNT-->
@@ -53,6 +53,7 @@
             <!--CART ITEMS-->
             % for my $i(@$items) {
             <div class="cart-item">
+               
                 <div class="cart-item_cnt">
                     <div class="cart-item_h">
                         <div class="cart-item_h_pic">
@@ -69,7 +70,7 @@
                     <div class="cart-item_quantity-cnt">
                         <div class="cart-form_field">
                             <label class="cart-form_label" for="prod1">Количество</label>
-                            <input class="cart-form_input" type="text" name="prod1" id="prod1" value="<%= $i->qty %>" data-num="number"/>
+                            <input class="cart-form_input" type="text" name="qty" id="prod1" value="<%= $i->qty %>" data-num="number" readonly/>
                         </div>
                         <div class="cart-item_price">
                             <span class="goods_price"><%= $i->item->price %> руб.</span>
@@ -77,15 +78,16 @@
                     </div>
                 </div>
                 <div class="cart-item_actions">
-                    <button class="cart-item_actions_btn __right" type="button">Сохранить изменения</button>
-                    <button class="cart-item_actions_btn" type="button">Удалить</button>
+                    <!-- <button class="cart-item_actions_btn __right" type="button">Сохранить изменения</button> -->
+                    <a href="/del_item/<%= $i->id %>"><button class="cart-item_actions_btn" type="button">Удалить</button></a>
                 </div>
+                </form>
             </div>
         %}  
             <!--CART SAVE-->
             <div class="cart-save">
                 <a class="btn __secondary" href="/items_by_cat">Продолжить покупки</a>
-                <a class="btn __simple" href="#">Оформить заказ</a>
+                <a class="btn __simple" href="/order">Оформить заказ</a>
             </div>
         </form>
     </div>
@@ -99,5 +101,8 @@
     <!--plugins-->
     <!--scripts-->
     <script src="/js/main.js"></script>
+    <script>
+        
+    </script>
 </body>
 </html>
