@@ -43,6 +43,9 @@ sub startup {
   $r->post('/order_save')->to('index#order_save');
   $r->post('/search')->to('index#search');
   
+  # admin interface
+  $r->get('/admin')->to('admin#welcome');
+  
 }
 
 1;
