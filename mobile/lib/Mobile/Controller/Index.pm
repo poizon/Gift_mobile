@@ -99,13 +99,18 @@ sub shop {
                  );
     $self->render('categories'); 
   } else {
-  
+  # подкатегорий нет - запршиваем все товары по категории
   my $items = GDB::Item::Manager->get_items(query => [cat => $id ]);
-  # если товаров в данной категории несколько - выводим список товаров
+  # если товаров в данной категории несколько  - выводим список товаров
         if ((scalar @$items)>1) {
         my $sub_name = GDB::ItemsCat::Manager->get_objects_from_sql(
           qq{SELECT descript,chpurl FROM giftec_site.items_cat where id=(select sub_id from giftec_site.items_cat where id='$id')}
           );
+        # если подкатегорий нет - но товаров несколько - то
+        unless ($subcat) {
+          $sub_name = GDB::ItemsCat::Manager->get_objects_from_sql(
+          qq{SELECT descript,chpurl FROM giftec_site.items_cat where id='$id'});
+        }
         
         $self->stash(title => $title,
                      url_title =>  $url_title,

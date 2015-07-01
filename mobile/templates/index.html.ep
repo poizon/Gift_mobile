@@ -116,7 +116,7 @@
                             <img src="/img/content/thumbnails/<%= $item->main_img %>" alt="<%= $item->note %>"/>
                         </div>
                         <div class="additional_name"><%= $item->name %></div>
-                        <div class="additional_price goods_price"><%= $item->price %> руб.</div>
+                        <div class="additional_price goods_price"><%= format_num($item->price) %> руб.</div>
                     </a>
                 </li>
                 % }
@@ -134,7 +134,7 @@
                         <img src="/img/content/thumbnails/<%= $item->main_img %>" alt="<%= $item->note %>"/>
                     </div>
                     <div class="additional_name"><%= $item->name %></div>
-                    <div class="additional_price goods_price"><%= $item->price %>  руб.</div>
+                    <div class="additional_price goods_price"><%= format_num($item->price) %>  руб.</div>
                     <div class="additional_rating rating">
                         <div class="rating_wrap">
                             <span class="rating_star __rated"></span>

@@ -47,9 +47,9 @@
             <!--goods HEAD INFO-->
             <div class="card-head_info">
                 <h2 class="page-header"><%= $item->name %></h2>
-                <div class="goods_price"><%= $item->price %> руб.</div>
+                <div class="goods_price"><%= format_num($item->price) %> руб.</div>
                 % if ($item->old_price>0) {
-                <div class="goods_old-price">Старая цена: <span class="goods_comp-price"><%= $item->old_price %> руб.</span></div>
+                <div class="goods_old-price">Старая цена: <span class="goods_comp-price"><%= format_num($item->old_price) %> руб.</span></div>
                 %}
                 <div class="flags">
                     %if($item->action) {
@@ -115,7 +115,7 @@
                 <%== $item->descript %>
                 <br>
                 <!--FEATURES-->
-                % if(@$spec->[0]->id) { 
+                % if(@$spec) { 
                 <div class="features">
                     <h3 class="features_t">Технические характеристики</h3>
                     <table class="features_table">
@@ -135,7 +135,7 @@
 
         <!--Viewers Ultimately Bought-->
         <section class="additional">
-            <h2 class="additional_t section-header __bg">Сопутствующие товары</h2>
+            <h2 class="additional_t section-header __bg">Похожие товары</h2>
             <ul id="carousel-like">
                 % for my $re(@$related) {
                 <li>
@@ -144,7 +144,7 @@
                         <img src="/img/content/thumbnails/<%= $re->relate->main_img %>" alt="<%= $re->relate->note %>"/>
                         </div>
                         <div class="additional_name"><%= $re->relate->name %></div>
-                        <div class="additional_price goods_price"><%= $re->relate->price %>  руб.</div>
+                        <div class="additional_price goods_price"><%= format_num($re->relate->price) %>  руб.</div>
                     </a>
                 </li>
                 % }

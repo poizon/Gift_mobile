@@ -29,9 +29,9 @@
                   <span class="breadcrumbs_i">
                     <a class="breadcrumbs_lnk" href="/shop/<%= $sub_url %>"><%= $sub_name %></a>
                 </span>
-                <span class="breadcrumbs_i">
+<!--                <span class="breadcrumbs_i">
                     <a class="breadcrumbs_lnk __active" href="javascript:void(0);"><%= $breadcrumbs %></a>
-                </span>
+                </span>-->
             </div>
         </nav>
 
@@ -44,10 +44,10 @@
                         <img src="/img/content/<%= $i->main_img %>" alt=""/>
                     </div>
                     <div class="goods_col">
-                        <div class="goods_price"><%= $i->price %> руб.</div>
+                        <div class="goods_price"><%= format_num($i->price) %> руб.</div>
                         % if($i->old_price > 0) {
                         <div class="goods_old-price">
-                            Старая цена: <span class="goods_comp-price"><%= $i->old_price %> руб.</span>
+                            Старая цена: <span class="goods_comp-price"><%= format_num($i->old_price) %> руб.</span>
                         </div>
                         %}
                         <div class="goods_name"><%= $i->name %></div>

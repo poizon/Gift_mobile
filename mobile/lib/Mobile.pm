@@ -19,7 +19,7 @@ $ENV{MOJO_CONFIG} = 'script/app.conf';
 sub startup {
   my $self = shift;
   my $cfg = $self->plugin('Config');
-  #$self->plugin('ITS_mojo::Helpers');
+  $self->plugin('Mobile::Helpers');
   $self->secrets([$cfg->{secret}]);
   $self->sessions->default_expiration($cfg->{session_exp});
   $self->sessions->cookie_name('gifmobile');
