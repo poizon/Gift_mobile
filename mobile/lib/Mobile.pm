@@ -45,6 +45,9 @@ sub startup {
   
   # admin interface
   $r->get('/admin')->to('admin#welcome');
+  $r->get('/admin_item')->to('admin#admin_item');
+  $r->get('/add_item')->to('admin#add_item');
+  
   
 }
 

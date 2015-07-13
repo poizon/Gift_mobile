@@ -1,0 +1,119 @@
+%= include 'admin/header'
+
+<div class="container">
+<form class="form-horizontal" role="form" method="post" id="attributeForm">
+  <div class="form-group form-group-sm">
+    <label for="name" class="col-sm-2 control-label">Название:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="name" name="name" value="">
+    </div>
+  </div>
+  <div class="form-group form-group-sm">
+    <label for="note" class="col-sm-2 control-label">Примечение:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="note" name="note" value="">
+    </div>
+  </div>
+    <div class="form-group form-group-sm">
+    <label for="cat" class="col-sm-2 control-label">Категория:</label>
+    <div class="col-sm-6">
+   <select class="form-control" name="cat">
+    % for $c(@$cats) {
+    <option value="<%= $c->id %>"><%= $c->descript %></option>  
+    %}
+  
+</select>
+   </div>
+  </div>
+  
+  <div class="form-group form-group-sm">
+    <label for="price" class="col-sm-2 control-label">Цена:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="price" name="price" value="">
+    </div>
+  </div>
+  <div class="form-group form-group-sm">
+    <label for="old_price" class="col-sm-2 control-label">Старая цена:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="old_price" name="old_price" value="">
+    </div>
+  </div>
+   <div class="form-group">
+    <label for="main_img"  class="col-sm-2 control-label">Картинка</label>
+       <div class="col-sm-6">
+    <input type="file" id="main_img" name="main_img">
+    <p class="help-block">Это основная картинка товара</p>
+       </div>
+  </div>
+  <div class="form-group">
+    <label for="descript" class="col-sm-2 control-label">Описание:</label>
+    <div class="col-sm-6">
+      <!--<textarea class="form-control" id="descript" name="descript" rows="5"></textarea>-->
+      <textarea name="descript" id="editor1" class="form-control" method="post" action="#" rows="15"></textarea>
+    </div>
+  </div>
+  
+    
+  <div class="form-group form-group-sm">
+    <div class="col-sm-offset-2 col-sm-6">
+      <div class="checkbox">
+        % for $b(@$bonus) {
+        <label>
+          <input type="checkbox" name="bonus" value="<%= $b->id %>"> <%= $b->descript %>
+        </label>
+        %}
+      </div>
+    </div>
+  </div>
+ <div class="radio col-sm-offset-2 col-sm-6">
+     <div class="col-sm-6">
+  <label>
+    <input type="radio" name="action" id="action" value="0" checked>
+    Нет акций
+  </label>
+     </div>
+</div>
+  <div class="radio col-sm-offset-2 col-sm-6">
+     <div class="col-sm-6">
+  <label>
+    <input type="radio" name="action" id="action" value="1">
+    Акция
+  </label>
+     </div>
+</div>
+  <div class="radio col-sm-offset-2 col-sm-6">
+     <div class="col-sm-6">
+  <label>
+    <input type="radio" name="action" id="new_item" value="2">
+    Новое
+  </label>
+     </div>
+</div>
+<div class="radio col-sm-offset-2 col-sm-6">
+     <div class="col-sm-6">
+  <label>
+    <input type="radio" name="action" id="popular" value="3">
+    Популярное
+  </label>
+     </div>
+</div>
+
+  <div class="form-group form-group-sm">
+    <div class="col-sm-offset-2 col-sm-6">
+      <button type="submit" class="btn btn-default">Сохранить</button>
+    </div>
+  </div>
+</form>
+
+<script type="text/javascript" src="/js/nicedit/nicEdit.js"></script>
+<script type="text/javascript">
+bkLib.onDomLoaded(function() {
+	new nicEditor({
+	  fullPanel : true,
+	  iconsPath : '/js/nicedit/nicEditorIcons.gif',
+	  uploadURI : '/uploader'
+	}).panelInstance('editor1');
+});
+</script>
+
+%= include 'admin/footer'
