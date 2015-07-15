@@ -47,6 +47,8 @@ sub startup {
   $r->get('/admin')->to('admin#welcome');
   $r->get('/admin_item')->to('admin#admin_item');
   $r->get('/add_item')->to('admin#add_item');
+  $r->post('/add_item')->to('admin#save_item');
+  $r->get('/edit_item/:id' => {id => 0})->to('admin#edit_item');
   
   
 }

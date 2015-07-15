@@ -3,15 +3,16 @@
 <div class="container">
 <form class="form-horizontal" role="form" method="post" id="attributeForm" enctype="multipart/form-data">
   <div class="form-group form-group-sm">
+      <input type="hidden" class="form-control" id="id" name="id" value="<%= $item->id %>">
     <label for="name" class="col-sm-2 control-label">Название:</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="name" name="name" value="">
+      <input type="text" class="form-control" id="name" name="name" value="<%= $item->name %>">
     </div>
   </div>
   <div class="form-group form-group-sm">
     <label for="note" class="col-sm-2 control-label">Примечение:</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="note" name="note" value="">
+      <input type="text" class="form-control" id="note" name="note" value="<%= $item->note %>">
     </div>
   </div>
     <div class="form-group form-group-sm">
@@ -19,7 +20,11 @@
     <div class="col-sm-6">
    <select class="form-control" name="cat">
     % for $c(@$cats) {
-    <option value="<%= $c->id %>"><%= $c->descript %></option>  
+    % if($c->id eq $item->cat) {
+    <option value="<%= $c->id %>" selected><%= $c->descript %></option>
+    % } else {
+    <option value="<%= $c->id %>"><%= $c->descript %></option>
+    %}
     %}
   
 </select>
@@ -29,15 +34,24 @@
   <div class="form-group form-group-sm">
     <label for="price" class="col-sm-2 control-label">Цена:</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="price" name="price" value="">
+      <input type="text" class="form-control" id="price" name="price" value="<%= $item->price %>">
     </div>
   </div>
   <div class="form-group form-group-sm">
     <label for="old_price" class="col-sm-2 control-label">Старая цена:</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="old_price" name="old_price" value="">
+      <input type="text" class="form-control" id="old_price" name="old_price" value="<%= $item->old_price %>">
     </div>
   </div>
+  <div class="col-sm-offset-2">
+    <img src="/img/content/<%= $item->main_img %>" alt="..." class="img-thumbnail">
+  </div>
+  <div class="col-sm-offset-2">
+    <label>
+          текущая картинка
+        </label>
+  </div>
+  
    <div class="form-group">
     <label for="main_img"  class="col-sm-2 control-label">Картинка</label>
        <div class="col-sm-6">
@@ -49,7 +63,7 @@
     <label for="descript" class="col-sm-2 control-label">Описание:</label>
     <div class="col-sm-6">
       <!--<textarea class="form-control" id="descript" name="descript" rows="5"></textarea>-->
-      <textarea name="descript" id="editor1" class="form-control" method="post" action="#" rows="15"></textarea>
+      <textarea name="descript" id="editor1" class="form-control" method="post" action="#" rows="15"><%= $item->descript %></textarea>
     </div>
   </div>
   
@@ -68,7 +82,11 @@
  <div class="radio col-sm-offset-2 col-sm-6">
      <div class="col-sm-6">
   <label>
-    <input type="radio" name="action" id="action" value="0" checked>
+    <input type="radio" name="action" id="action" value="0"
+           % unless($item->action and $item->new_item and $item->popular) {
+           checked
+           %}
+           >
     Нет акций
   </label>
      </div>
@@ -76,7 +94,11 @@
   <div class="radio col-sm-offset-2 col-sm-6">
      <div class="col-sm-6">
   <label>
-    <input type="radio" name="action" id="action" value="1">
+    <input type="radio" name="action" id="action" value="1"
+           % if ($item->action) {
+           checked
+           %}
+    >
     Акция
   </label>
      </div>
@@ -84,7 +106,11 @@
   <div class="radio col-sm-offset-2 col-sm-6">
      <div class="col-sm-6">
   <label>
-    <input type="radio" name="action" id="new_item" value="3">
+    <input type="radio" name="action" id="new_item" value="3"
+             % if ($item->new_item) {
+           checked
+           %}
+    >
     Новое
   </label>
      </div>
@@ -92,7 +118,11 @@
 <div class="radio col-sm-offset-2 col-sm-6">
      <div class="col-sm-6">
   <label>
-    <input type="radio" name="action" id="popular" value="2">
+    <input type="radio" name="action" id="popular" value="2"
+           % if ($item->popular) {
+           checked
+           %}
+           >
     Популярное
   </label>
      </div>
