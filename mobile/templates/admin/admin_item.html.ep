@@ -6,6 +6,22 @@
         <div class="container">
       <h3>Список товаров</h3>
 <div class="table-hover">
+  <form class="form-inline">
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputEmail3">Категория</label>
+     <select class="form-control" name="cat">
+    % for $c(@$cats) {
+    % if($c->id eq $cat) {
+    <option value="<%= $c->id %>" selected><%= $c->descript %></option>
+    % } else {
+    <option value="<%= $c->id %>"><%= $c->descript %></option>
+    %}
+    %}
+  
+</select>
+  </div>
+  <button type="submit" class="btn btn-default">Отобрать</button>
+</form>
   <table class="table table-hover">
     <thead>
         <tr>
@@ -14,6 +30,7 @@
           <th>Категория</th>
           <th>Цена</th>
           <th>edit</th>
+          <th>Specs</th>
         </tr>
       </thead>
     <tbody>
@@ -24,6 +41,7 @@
         <td><%= $p->items_cat->descript %></td>
         <td><%= $p->price %></td>
         <td><a href="/edit_item/<%= $p->id %>.html"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
+        <td><a href="/add_spec/<%= $p->id %>.html"><span class="glyphicon glyphicon-scale" aria-hidden="true"></span></a></td>
       </tr>
       %}
     </tbody>

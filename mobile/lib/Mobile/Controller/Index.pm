@@ -1,6 +1,6 @@
 package Mobile::Controller::Index;
 use Mojo::Base 'Mojolicious::Controller';
-use Data::Dumper;
+#use Data::Dumper;
 # This action will render a template
 sub welcome {
   my $self = shift;

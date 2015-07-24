@@ -1,0 +1,9 @@
+%= include 'admin/header'
+
+
+    % for $c(@$row) {
+   <%= $c %><br/>
+    %}
+  
+
+%= include 'admin/footer'

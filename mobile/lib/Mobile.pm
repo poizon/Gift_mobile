@@ -44,12 +44,13 @@ sub startup {
   $r->post('/search')->to('index#search');
   
   # admin interface
-  $r->get('/admin')->to('admin#welcome');
+  $r->get('/admin/:cat' => {cat => 0 })->to('admin#welcome');
   $r->get('/admin_item')->to('admin#admin_item');
   $r->get('/add_item')->to('admin#add_item');
   $r->post('/add_item')->to('admin#save_item');
   $r->get('/edit_item/:id' => {id => 0})->to('admin#edit_item');
-  
+  $r->get('/add_spec/:id' => {id => 0})->to('admin#add_spec');
+  $r->post('/save_row_spec')->to('admin#save_row_spec');
   
 }
 

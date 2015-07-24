@@ -1,0 +1,27 @@
+%= include 'admin/header'
+
+<div class="container">
+<form class="form-horizontal" role="form" method="post" id="attributeForm" action="/save_row_spec">
+  <div class="form-group form-group-sm">
+    <input type="hidden" class="form-control" id="id" name="id" value="<%= $item->id %>">
+    <label for="name" class="col-sm-2 control-label">Название:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="name" name="name" value="<%= $item->name %>" readonly>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="rowcnt" class="col-sm-2 control-label">Экспорт:</label>
+    <div class="col-sm-6">
+      <textarea class="form-control" id="rowcnt" name="rowcnt" rows="15"></textarea>
+    </div>
+  </div>
+  <div class="form-group form-group-sm">
+    <div class="col-sm-offset-2 col-sm-6">
+      <button type="submit" class="btn btn-default">Сохранить</button>
+    </div>
+  </div>
+  
+</form>
+
+%= include 'admin/footer'

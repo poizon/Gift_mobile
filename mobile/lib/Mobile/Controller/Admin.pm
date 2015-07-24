@@ -1,6 +1,6 @@
 package Mobile::Controller::Admin;
 use Mojo::Base 'Mojolicious::Controller';
-use Data::Dumper;
+#use Data::Dumper;
 use Image::Size;
 use Image::Resize;
 
@@ -18,8 +18,19 @@ sub not_found {
 
 sub admin_item {
   my $self = shift;
-  my $items = GDB::Item::Manager->get_items();
-  $self->stash(items => $items);
+  my $cat = $self->param('cat') || 0;
+  my $cats = GDB::ItemsCat::Manager->get_items_cat();
+  my $items = '';
+  if ($cat) {
+      $items = GDB::Item::Manager->get_items(query =>[cat => $cat]);
+  } else {
+      $items = GDB::Item::Manager->get_items();
+  }
+  
+  $self->stash(items => $items,
+               cats => $cats,
+               cat  => $cat
+               );
   $self->render('admin/admin_item');
 }
 
@@ -49,6 +60,34 @@ sub edit_item {
   $self->render('admin/edit_item');
 }
 
+sub add_spec {
+    my $self = shift;
+    my $id = $self->param('id') || 0;
+    my $item = GDB::Item->new(id => $id)->load;
+    $self->stash(
+               item => $item
+               );
+  
+  $self->render('admin/add_spec');
+  
+}
+
+sub save_row_spec {
+    my $self = shift;
+    my $id = $self->param('id') || 0;
+    my $row = $self->param('rowcnt');
+    my @row = split /\n/,$row;
+    my @sorted;
+    for (my $i=0;$i <= scalar @row; $i++) {
+      my $it = GDB::ItemsSpec->new(name => $row[$i], descript => $row[$i+1], item_id => $id);
+      $it->save;
+      #push(@sorted,"$row[$i]:$row[$i+1]");
+      $i++;
+    }
+    
+    $self->redirect_to('/admin_item');
+}
+
 sub save_item {
     my $self = shift;
     my $id = $self->param('id') || 0;
@@ -61,24 +100,41 @@ sub save_item {
     $price =~ s/[^0-9]+//g;
     my $old_price = $self->param('old_price');
     $old_price =~ s/[^0-9]+//g;
-    my $main_img = $self->param('main_img');
-    my $filename = $main_img->filename;
+    my $main_img = $self->param('main_img') || 0;
+    my $filename = '';
+    if($main_img) {
+      $filename = $main_img->filename;
+    }
     my $descript = $self->param('descript');
     my $bonus = $self->every_param('bonus');
-    print Dumper($bonus);
+    #print Dumper($bonus);
     my $action = $self->param('action');
-    $main_img->move_to("$path/$filename");
-    my $image_type = $main_img->headers->content_type;
-    my $big_name = resize_img($filename,$image_type,$path,300,300,0);
-    my $t_name = resize_img($filename,$image_type,$path,80,80,1);
     my $type_cat = GDB::ItemsCat->new(id => $cat)->load;
-       @act = qw(0 0 0) if $action eq 0;
-       @act = qw(1 0 0) if $action eq 1;
-       @act = qw(0 1 0) if $action eq 2;
-       @act = qw(0 0 1) if $action eq 3;
+    if ($filename) {
+        $main_img->move_to("$path/$filename");
+        my $image_type = $main_img->headers->content_type;
+        my $big_name = resize_img($filename,$image_type,$path,300,300,0);
+        my $t_name = resize_img($filename,$image_type,$path,80,80,1);
+           @act = qw(0 0 0) if $action eq 0;
+           @act = qw(1 0 0) if $action eq 1;
+           @act = qw(0 1 0) if $action eq 2;
+           @act = qw(0 0 1) if $action eq 3;
+    }
     
     if ($id) {
-      #code
+    my $i = GDB::Item->new(id => $id)->load;
+    $i->type($type_cat->type);
+    $i->cat($cat);
+    $i->name($name);
+    $i->note($note);
+    $i->descript($descript);
+    $i->price($price);
+    $i->old_price($old_price);
+    $i->main_img($filename) if $filename;
+    $i->action($act[0]);
+    $i->popular($act[1]);
+    $i->new_item($act[2]);
+    $i->save;
     } else {
     my $item = GDB::Item->new(type => $type_cat->type, cat => $cat, name => $name, note => $note, descript => $descript, price => $price, old_price => $old_price,
                               main_img => $filename, action => $act[0], popular => $act[1], new_item => $act[2]);

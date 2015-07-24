@@ -1,7 +1,7 @@
 %= include 'admin/header'
 
 <div class="container">
-<form class="form-horizontal" role="form" method="post" id="attributeForm" enctype="multipart/form-data">
+<form class="form-horizontal" role="form" method="post" action="/add_item" id="attributeForm" enctype="multipart/form-data">
   <div class="form-group form-group-sm">
       <input type="hidden" class="form-control" id="id" name="id" value="<%= $item->id %>">
     <label for="name" class="col-sm-2 control-label">Название:</label>
