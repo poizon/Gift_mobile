@@ -3,12 +3,12 @@
 
 SITENAME=Gift
 
-DIR=/home/pavel/Gift_mobile/script
+DIR=/home/pavel/Gift_mobile/mobile/script
 SCRIPT=mobile
 #USER=root
 WORKERS=3
 LISTEN=*:3000
-ERROR_LOG=/home/pavel/Gift_mobile/error_starman.log
+ERROR_LOG=/home/pavel/Gift_mobile/mobile/log/error_starman.log
 
 PIDFILE=$DIR/site-$SITENAME.pid
 
