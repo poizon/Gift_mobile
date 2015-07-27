@@ -51,11 +51,18 @@ sub edit_item {
   my $cats = GDB::ItemsCat::Manager->get_items_cat();
   my $bonus = GDB::Bonus::Manager->get_bonuses();
   my $bon_item = GDB::ItemsBonu::Manager->get_items_bonus(query => [ id => $id]);
+  my $related= GDB::ItemsRelated::Manager->get_items_related(query => [item_id => $id]);
+  my $r_str='';
+  foreach my $rid(@$related) {
+      $r_str .= $rid->relate_id . ",";
+  }
   my $item = GDB::Item->new(id => $id)->load;
   $self->stash(cats => $cats,
                bonus => $bonus,
                bon_item => $bon_item,
-               item => $item);
+               item => $item,
+               related => $r_str,
+               );
   
   $self->render('admin/edit_item');
 }
@@ -97,6 +104,7 @@ sub save_item {
     my $note = $self->param('note');
     my $cat = $self->param('cat');
     my $price = $self->param('price');
+    my $related = $self->param('related') || 0;
     $price =~ s/[^0-9]+//g;
     my $old_price = $self->param('old_price');
     $old_price =~ s/[^0-9]+//g;
@@ -135,6 +143,14 @@ sub save_item {
     $i->popular($act[1]);
     $i->new_item($act[2]);
     $i->save;
+    
+     if ($related) {
+      foreach my $rid(split(/,/,$related)) {
+      my $r = GDB::ItemsRelated->new(relate_id => $rid, item_id => $id);
+      $r->save;
+      }
+    }
+     
     } else {
     my $item = GDB::Item->new(type => $type_cat->type, cat => $cat, name => $name, note => $note, descript => $descript, price => $price, old_price => $old_price,
                               main_img => $filename, action => $act[0], popular => $act[1], new_item => $act[2]);
@@ -145,6 +161,14 @@ sub save_item {
       my $bonuses = GDB::ItemsBonu->new(bonus_id => $b, item_id =>$item_id);
       $bonuses->save;
     }
+    # записываем сопутствующие товары
+    if ($related) {
+      foreach my $rid(split(/,/,$related)) {
+      my $r = GDB::ItemsRelated->new(relate_id => $rid, item_id => $item_id);
+      $r->save;
+      }
+    }
+    
     
     }
     

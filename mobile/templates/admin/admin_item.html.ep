@@ -31,6 +31,7 @@
           <th>Цена</th>
           <th>edit</th>
           <th>Specs</th>
+          <th>Images</th>
         </tr>
       </thead>
     <tbody>
@@ -42,6 +43,7 @@
         <td><%= $p->price %></td>
         <td><a href="/edit_item/<%= $p->id %>.html"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
         <td><a href="/add_spec/<%= $p->id %>.html"><span class="glyphicon glyphicon-scale" aria-hidden="true"></span></a></td>
+        <td><a href="/add_img/<%= $p->id %>.html"><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span></a></td>
       </tr>
       %}
     </tbody>

@@ -30,7 +30,12 @@
 </select>
    </div>
   </div>
-  
+ <div class="form-group form-group-sm">
+    <label for="related" class="col-sm-2 control-label">Сопутствующие товары (id):</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="price" name="related" value="<%= $related %>">
+    </div>
+  </div>
   <div class="form-group form-group-sm">
     <label for="price" class="col-sm-2 control-label">Цена:</label>
     <div class="col-sm-6">
